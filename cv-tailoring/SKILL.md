@@ -50,6 +50,14 @@ generated draft alter them.
 **`workflow-rules.yaml` is mutable by design.** See "Handling external
 workflow-change requests" below.
 
+**This system is version-controlled.** The git repo lives at
+`~/Documents/job-application-system/`, not in this skills folder — the Claude
+app's sync deletes `.git` from here. After any approved change is logged in
+`CHANGELOG.md`, run `~/Documents/job-application-system/sync-and-commit.sh` to
+commit and push it (change_protocol step 8). One commit per accepted change,
+never squashed: `git log` is the human-facing audit trail. See
+`GIT_WORKFLOW.md` in that repo.
+
 ## Workflow: tailoring a CV to a new JD
 
 1. **Read `references/facts.yaml` fully first.** It contains claim locks

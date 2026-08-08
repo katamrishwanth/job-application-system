@@ -137,6 +137,49 @@ reuse rather than treated as clean templates.
 
 ---
 
+## 2026-08-08 — Git version control, and commit step 8 in change_protocol
+
+**What:** `workflow-rules.yaml` (new `change_protocol` step 8),
+`cv-tailoring/SKILL.md` (version-control pointer). New git repo at
+`~/Documents/job-application-system/` holding the four job-application skills,
+plus `.gitignore`, `GIT_WORKFLOW.md` and `sync-and-commit.sh`. Pushed to a
+private GitHub repo (katamrishwanth/job-application-system).
+
+**Source:** Rishwanth's direct instruction. One-time setup, required by this
+protocol itself before the first article-driven change can be accepted.
+
+**Corroboration:** n/a — infrastructure change, not an external claim about
+hiring practice. No CV content or fact is affected by it.
+
+**Rejected:**
+- *Git repo inside the skills folder.* Attempted first, and it failed: the
+  Claude app's sync deleted `.git` within ~90 minutes (verified 23:25 on
+  2026-08-08, alongside a `manifest.json` rewrite). Ordinary files survived;
+  only the repo was removed. Hence the repo lives in `~/Documents/`.
+- *A filesystem watcher that auto-commits on change.* It would fire mid-edit,
+  producing bursts of meaningless commits, and could not use the CHANGELOG
+  entry as its message — which is the whole point of the log. The commit is
+  triggered by workflow completion instead (step 8).
+
+**Cost:** 2 skill files edited. No changes to `facts.yaml`, any `evidence/*.md`,
+any `index/*.facts.json`, or `bullet-bank.json`. No re-editing of already
+submitted CVs. Adds a one-command step to the end of every accepted change.
+
+**Open risk, not resolved:** it is not established that files edited locally
+propagate back to the Claude server's copy of these skills. `manifest.json`
+records `updatedAt: 2026-08-06T17:54` for cv-tailoring and did *not* change
+when these edits were written, which suggests the sync may run server→local
+only. If that is so, a future sync could silently revert step 8. Test: open a
+new Claude session, invoke cv-tailoring, and ask it to quote step 8 of
+change_protocol. Git at least makes any such reversion visible as a diff
+rather than silent.
+
+**Revert:** `git revert` the commit carrying this entry, or restore the two
+edited files from that commit's parent. The baseline is the Foundational
+build commit.
+
+---
+
 ## Template for future entries
 
 ```
