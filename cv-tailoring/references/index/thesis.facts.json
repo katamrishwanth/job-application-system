@@ -1,0 +1,154 @@
+[
+  {
+    "id": "THS-F01",
+    "role": "thesis",
+    "fact": "Normalised BEV performance to maximum payload capacity, adding ~32% to BEV CAPEX/OPEX",
+    "tags": [
+      "modelling",
+      "rigour",
+      "technical",
+      "mobility"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#technical-contributions",
+    "verified": true,
+    "notes": "Most technically impressive fact in the profile. On NO current CV."
+  },
+  {
+    "id": "THS-F02",
+    "role": "thesis",
+    "fact": "Built a 5-year TCO model covering CAPEX, OPEX and infrastructure for German long-haul operators",
+    "tags": [
+      "modelling",
+      "analytics",
+      "mobility"
+    ],
+    "has_bullet": "THS-01",
+    "cv_suitable": true,
+    "source": "thesis.md#tco-model-components",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F03",
+    "role": "thesis",
+    "fact": "Conducted LCA across 3 fuel pathways covering production, tank-to-wheel, well-to-wheel and infrastructure",
+    "tags": [
+      "sustainability",
+      "modelling",
+      "lca"
+    ],
+    "has_bullet": "THS-02",
+    "cv_suitable": true,
+    "source": "thesis.md#lca-model-components",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F04",
+    "role": "thesis",
+    "fact": "Ran 6 sensitivity analyses: diesel price, electricity price, battery cost, grid mix, feedstock, battery tech",
+    "tags": [
+      "modelling",
+      "sensitivity",
+      "rigour"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#sensitivity-analyses-run",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F05",
+    "role": "thesis",
+    "fact": "Found HVO delivers 70-90% GHG reduction depending on feedstock, with no fleet modification needed",
+    "tags": [
+      "sustainability",
+      "strategy",
+      "mobility"
+    ],
+    "has_bullet": "THS-03",
+    "cv_suitable": true,
+    "source": "thesis.md#key-finding",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F06",
+    "role": "thesis",
+    "fact": "Delivered a time-dependent two-part recommendation: HVO short term, BEV long term",
+    "tags": [
+      "strategy",
+      "judgment",
+      "conditional_reasoning"
+    ],
+    "has_bullet": "THS-03",
+    "cv_suitable": true,
+    "source": "thesis.md#key-finding",
+    "verified": true,
+    "notes": "Comfort with conditional rather than single-answer recommendations."
+  },
+  {
+    "id": "THS-F07",
+    "role": "thesis",
+    "fact": "Modelled EU ETS, RED II, EU HDV CO2 Standards and the German EUR 1.6B Gesamtkonzept grant scheme",
+    "tags": [
+      "regulation",
+      "policy",
+      "sustainability",
+      "germany"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#regulatory-context-modelled",
+    "verified": true,
+    "notes": "Naming the German scheme in German signals real engagement with DE policy."
+  },
+  {
+    "id": "THS-F08",
+    "role": "thesis",
+    "fact": "Developed an infrastructure guesstimate methodology comparing charging and refuelling station costs",
+    "tags": [
+      "modelling",
+      "estimation",
+      "infrastructure"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#technical-contributions",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F09",
+    "role": "thesis",
+    "fact": "Built the entire multi-scenario model self-directed in Excel with no external model",
+    "tags": [
+      "modelling",
+      "excel",
+      "independence"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#engagement-facts",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "THS-F10",
+    "role": "thesis",
+    "fact": "Quantified battery cost as adding ~23% to BEV TCO versus diesel",
+    "tags": [
+      "modelling",
+      "analytics",
+      "mobility"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "thesis.md#technical-contributions",
+    "verified": true,
+    "notes": null
+  }
+]

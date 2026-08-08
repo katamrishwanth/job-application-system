@@ -1,0 +1,242 @@
+# =============================================================
+# facts.yaml — Rishwanth Katam, single source of truth
+# Last resolved: 2026-08-05
+# Every value here was explicitly confirmed. If a CV, draft, or
+# past chat says something different, THIS FILE WINS.
+# =============================================================
+
+personal:
+  full_name: "Rishwanth Katam"
+  phone: "+49 176 86109845"
+  email: "rishwanth.katam@edu.escp.eu"
+  location: "Germany (Berlin)"
+  linkedin: "https://www.linkedin.com/in/rishwanth-katam/"
+
+languages:
+  english: "C2 — fluent"
+  german: "B1 — intermediate (aiming for C1 by mid-2027)"
+  german_note: >
+    Claimed level is B1, based on external classes taken outside ESCP.
+    Real-world spoken confidence is lower (~A2) — this is NOT what
+    goes on the CV, but Rishwanth should expect this gap to surface
+    on a German-language call and should be ready for it. For roles
+    where German is a hard filter, use proactive disclosure framed
+    after fit evidence (see cover-letter skill), not silence.
+  telugu: "Native"
+  hindi: "Native / bilingual proficiency"
+
+education:
+  escp:
+    name: "ESCP Business School"
+    dates: "2022 – 2026"
+    degree: "Master in Management"
+    gpa: "3.8/4.0 (top 6% of cohort)"
+    ranking: "#4 in FT European Business School Rankings"
+    specializations: "Research, Analyses, Impact Studies, and Consulting | AI for Business Innovation"
+    graduation_year: 2026
+    graduation_note: >
+      LOCKED as 2026 (confirmed via official transcript). Do not use 2025
+      anywhere, including CVs already circulating — correct on next edit.
+    thesis:
+      title: "Decarbonising Long-Haul Trucking in Germany: Comparison of Diesel, HVO, & Electric"
+      dates: "2024"
+      dates_note: >
+        LOCKED as 2024 (defended 26 September 2024, per the defence deck and
+        thesis title page — corrected from an earlier "2 Sep 2024" note,
+        which was wrong). Do NOT use Jul'25–Sep'25 or any 2025 date.
+      supervisor: "Joe Miemczyk"
+      jury: "Joe Miemczyk (jury member 1, also supervisor), Nitheesh Kumar P. (jury member 2)"
+      built_in: "Excel (not Python) — self-built multi-scenario model"
+  iit:
+    name: "Indian Institute of Technology (IIT Bhubaneswar)"
+    dates: "2016 – 2021"
+    degree: "Bachelors in Mechanical Engineering & Masters in Mechanical Systems Design (integrated)"
+    gpa: "7.74/10"
+
+work_experience:
+  pg:
+    company: "Procter & Gamble (P&G) DACH"
+    role: "Analytics & Insights Intern"
+    dates: "Aug'25 – Jan'26"
+    location: "Frankfurt"
+    manager: "Kevin Schumacher"
+  libergy:
+    company: "Libergy GmbH"
+    role: "Visiting Associate"
+    dates: "May'24 – Oct'24"
+    location: "Berlin"
+    tco_lca_model_note: >
+      Verified against the actual Excel model 2026-08-06: covers 7
+      verticals, not 6 as previously stated — Transport & logistics
+      (long-distance, road), Construction, Agriculture, Waste collection,
+      Industrial, Public transport, Public services. The model was built
+      alongside the master's thesis during the same period and shares the
+      same core CAPEX/OPEX calculation engine (confirmed: both workbooks
+      have Breakeven and Sensitivity analysis sheets — these are NOT
+      thesis-exclusive as previously assumed). Genuine differences: the
+      thesis is scoped to long-haul trucks only and has a dedicated
+      infrastructure-guesstimate methodology sheet; Libergy's model spans
+      all 7 verticals with infrastructure handled as embedded assumption
+      variables rather than a separate methodology.
+    lean_canvas_workshop_role: "participated"
+    lean_canvas_note: >
+      LOCKED as "participated", not "led". Rishwanth confirmed CVs have
+      sometimes stretched this to "led" and asked for permission to
+      stretch "to some small limit" — this is not being encoded as an
+      allowed stretch because it's a specific, checkable claim a recruiter
+      can probe in one follow-up question ("walk me through how you ran
+      it"). 180DC already provides a genuine, defensible team-lead claim
+      (6-person team, ESCP engagement) — use that slot for leadership, not
+      this one. Override per-application if Rishwanth explicitly instructs
+      it, but the default output is "participated" framing.
+  consulting_180dc:
+    company: "180 Degrees Consulting ESCP"
+    role: "Consultant"
+    dates: "Sep'23 – May'24"
+    location: "Paris"
+    engagements_note: >
+      TWO separate engagements under 180DC, confirmed via primary documents
+      2026-08-06 (previously understated as one). Do not use "leading 2
+      projects" as a blanket claim — the leadership applies to only one.
+    engagement_a:
+      client: "Handicap International Belgium"
+      client_note: "External nonprofit client — nameable, unlike engagement B."
+      dates: "~Aug-Dec 2023 (scoping deck dated Fall 2023, 8-10 week roadmap)"
+      scope: "Communications and donor strategy — addressing declining
+        funding revenue via segmentation analysis, digital engagement
+        effectiveness, and donor-conversion strategy"
+      role: "Consultant. Team lead was a senior 180DC colleague, not Rishwanth."
+    engagement_b:
+      client_note: >
+        Client was ESCP Business School itself. Do not name the client
+        directly — describe as "a European higher education institution".
+      team_lead: "6-person team — genuine, defensible leadership claim.
+        This is the ONE 180DC engagement Rishwanth led."
+  quantis:
+    company: "Quantis – a BCG company"
+    role: "Consultant (ESCP academic consulting project with industry sponsor)"
+    dates: "Jan'23 – Apr'23"
+    dates_note: >
+      LOCKED as Jan'23–Apr'23. Some old CV versions and profile notes show
+      Sep'23–May'24, which incorrectly overlaps 180DC dates — that version
+      is WRONG and should be corrected wherever it appears. Flag any draft
+      that shows the Sep'23–May'24 version.
+    location: "Paris"
+    student_team: >
+      6 students, confirmed from the report's own title page (2026-08-06):
+      Anisha Kaul, Charlotte Zenatelli, Inês Pedro, Rishwanth Katam, Thibaud
+      Auzière, Till Meinhardt. This is a DIFFERENT number from the 7 expert
+      interviews below — do not conflate them. Two older reference letters
+      (RWE, Aurora) stated "a team of 7 students", which is wrong.
+    interviews_claim: "7 expert interviews"
+    interviews_note: >
+      LOCKED framing: "synthesised 7 expert interviews". Breakdown for
+      Rishwanth's own reference (not necessarily all stated on CV): 5
+      company interviews secured (Adidas, The North Face/VF Group, Vibram,
+      Eileen Fisher, Campsider) out of 75+ companies contacted, plus 2
+      industry experts (one from OECD). "7" is accurate and defensible as
+      "expert interviews" — do not describe all 7 as company interviews,
+      and do not confuse this with the 6-person student team above.
+  prajjawala:
+    company: "Prajjawala Systems & Solutions"
+    role: "Strategy Intern"
+    dates: "Jun'21 – Apr'22"
+    location: "Chennai"
+    patent_note: >
+      DO NOT CLAIM. Patent Application No. 554/KOL/2011 predates
+      Rishwanth's involvement by roughly a decade. Never attribute this
+      patent to him, directly or by implication.
+
+side_projects:
+  n8n_automation:
+    name: "Invoice/cost automation for family construction business"
+    stack: "Self-hosted n8n + Ollama (free, self-hosted)"
+    status: "top differentiator — use on CVs, consistently the strongest AI-building proof point"
+  muma:
+    name: "Museum Mapper (MuMa) — AI & Digital Innovation Project"
+    context: "ESCP academic project, team of 4"
+    stack: "A* pathfinding + GNN crowd-density prediction"
+    status: "use on CVs, second-strongest AI proof point"
+  hermes_agent:
+    name: "Hermes agent for automated job applications"
+    status: "NEVER put on CVs or application materials"
+    reason: >
+      Advertising an AI that applies to jobs on your behalf signals volume
+      applying, not genuine interest in the specific employer — a
+      credibility risk, not an honesty issue. Keep strictly as interview
+      talking point.
+
+achievements:
+  - "Power of You award — P&G, for rapid design & execution of Test & Control experiment on long-form YouTube ad frequency, OND 2025"
+  - "National Budding Innovators Award – 2018"
+  - "Winner, Moody's Credit Rating Challenge 2023 (top French business schools)"
+
+# =============================================================
+# Skills bank — replaces the old "never claim" blocklist.
+# Status meanings:
+#   demonstrated = built something with it, fully defensible in interview
+#   exposure     = has used it, shallow — phrase carefully, only if JD asks
+#   learning     = actively upskilling, not yet proven
+# Add to this list whenever Rishwanth picks up something new — don't wait
+# to be asked, but confirm status with him before using a new entry.
+# =============================================================
+skills_bank:
+  - name: "MS Excel (incl. VBA)"
+    status: demonstrated
+  - name: "MS PowerPoint"
+    status: demonstrated
+  - name: "Power BI"
+    status: demonstrated
+  - name: "Power Query"
+    status: demonstrated
+  - name: "Power Automate"
+    status: demonstrated
+  - name: "Looker Studio"
+    status: demonstrated
+  - name: "NielsenIQ (Nielsen Discover)"
+    status: demonstrated
+  - name: "YouGov SimIT"
+    status: demonstrated
+  - name: "Kantar WPO"
+    status: demonstrated
+  - name: "Python"
+    status: exposure
+    note: "basics — used for P&G Test & Control analysis; not advanced/production-level"
+  - name: "SQL"
+    status: learning
+    note: "Not demonstrated anywhere. Completing an online course on SQL right now."
+  - name: "n8n"
+    status: demonstrated
+  - name: "Ollama / local LLM hosting/ Open-source LLMs"
+    status: demonstrated
+  - name: "Bubble (no-code)"
+    status: demonstrated
+  - name: "MS Azure"
+    status: exposure
+    note: "basics, used briefly at P&G"
+  - name: "Databricks"
+    status: exposure
+    note: "basics, used briefly at P&G"
+  - name: "AI tools (Claude, Claude Code, ChatGPT)"
+    status: demonstrated
+
+# =============================================================
+# Master CV routing
+# =============================================================
+master_cvs:
+  cv_a: "Commercial Analytics — base for analytics/BI/FMCG-adjacent roles"
+  cv_b: "Sustainability & Energy Transition — base for roles aligned with thesis/decarbonisation"
+  cv_c: "Strategy & Business Development — base for consulting and strategy roles"
+
+# =============================================================
+# Formatting rules (unchanged, carried over from established workflow)
+# =============================================================
+formatting_rules:
+  work_experience_bullet_chars: [100, 115]
+  project_bullet_chars: [120, 130]
+  summary_max_chars: 400
+  cover_letter_length_pct_of_samples: [75, 85]
+  no_em_dashes: true
+  no_invented_metrics: true
+  format: "CAR or STAR"
+  output_style: "ORIGINAL → REVISED pairs, character counts verified programmatically"

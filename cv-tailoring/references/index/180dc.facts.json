@@ -1,0 +1,225 @@
+[
+  {
+    "id": "180-F01",
+    "role": "consulting_180dc",
+    "fact": "Led a 6-person team delivering carbon impact recommendations to a multi-campus European institution",
+    "tags": [
+      "leadership",
+      "sustainability",
+      "stakeholder_management"
+    ],
+    "has_bullet": "180-01",
+    "cv_suitable": true,
+    "source": "180dc.md#engagement-facts",
+    "verified": true,
+    "notes": "PRIMARY leadership proof point in the entire profile."
+  },
+  {
+    "id": "180-F02",
+    "role": "consulting_180dc",
+    "fact": "Reported that 2 of 3 benchmarked routes were not viable, including one 29.61% more expensive and 60% slower",
+    "tags": [
+      "intellectual_honesty",
+      "analytics",
+      "consulting"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "180dc.md#mobility",
+    "verified": true,
+    "notes": "Best 'data contradicted what the client wanted' answer. Interview only."
+  },
+  {
+    "id": "180-F03",
+    "role": "consulting_180dc",
+    "fact": "Benchmarked Paris-London train as 12.46% cheaper and 52% faster than flying, the highest-ROI shift",
+    "tags": [
+      "analytics",
+      "sustainability",
+      "cost_benefit"
+    ],
+    "has_bullet": "180-05",
+    "cv_suitable": true,
+    "source": "180dc.md#mobility",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F04",
+    "role": "consulting_180dc",
+    "fact": "Built an impact/effort matrix across 4 footprint categories to prioritise 3 interventions",
+    "tags": [
+      "prioritisation",
+      "strategy",
+      "sustainability"
+    ],
+    "has_bullet": "180-04",
+    "cv_suitable": true,
+    "source": "180dc.md#carbon-footprint-mapping",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F05",
+    "role": "consulting_180dc",
+    "fact": "Tailored food and commute recommendations separately for each of 5 country campuses",
+    "tags": [
+      "localisation",
+      "strategy",
+      "multi_market"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "180dc.md#food",
+    "verified": true,
+    "notes": "Shows multi-country rollout is not one solution repeated. Underused."
+  },
+  {
+    "id": "180-F06",
+    "role": "consulting_180dc",
+    "fact": "Researched transport partners including SNCF, Deutsche Bahn, BlaBlaCar Daily, Mollow and Byway",
+    "tags": [
+      "partnerships",
+      "market_research",
+      "commercial"
+    ],
+    "has_bullet": "180-06",
+    "cv_suitable": true,
+    "source": "180dc.md#mobility",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F07",
+    "role": "consulting_180dc",
+    "fact": "Identified a carbon accounting platform willing to donate source code, outside the original brief",
+    "tags": [
+      "initiative",
+      "partnerships",
+      "opportunity_spotting"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "180dc.md#additional-opportunity",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F08",
+    "role": "consulting_180dc",
+    "fact": "Owned project scoping, client check-ins and final delivery, maintaining cadence and risk tracking",
+    "tags": [
+      "project_management",
+      "stakeholder_management"
+    ],
+    "has_bullet": "180-02",
+    "cv_suitable": true,
+    "source": "180dc.md#methodology",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F09",
+    "role": "consulting_180dc",
+    "fact": "Coordinated a team across 5 countries, functions and time zones",
+    "tags": [
+      "leadership",
+      "distributed_teams",
+      "project_management"
+    ],
+    "has_bullet": "180-03",
+    "cv_suitable": true,
+    "source": "180dc.md#engagement-facts",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F10",
+    "role": "consulting_180dc",
+    "fact": "Quantified EUR 60 per student saving and 92g CO2 offset per student on one route",
+    "tags": [
+      "analytics",
+      "sustainability",
+      "cost_benefit"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "180dc.md#mobility",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F11",
+    "role": "consulting_180dc",
+    "fact": "Converted findings into board-ready recommendations influencing partnership decisions across 5 campuses",
+    "tags": [
+      "communication",
+      "strategy",
+      "influence"
+    ],
+    "has_bullet": "180-07",
+    "cv_suitable": true,
+    "source": "180dc.md#methodology",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F12",
+    "role": "consulting_180dc",
+    "fact": "Diagnosed declining donor funding revenue for an international humanitarian NGO",
+    "tags": [
+      "market_research",
+      "nonprofit",
+      "strategy",
+      "commercial"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "180dc.md#engagement-a",
+    "verified": true,
+    "notes": "Handicap International Belgium. Second 180DC engagement, discovered 2026-08-06."
+  },
+  {
+    "id": "180-F13",
+    "role": "consulting_180dc",
+    "fact": "Built a donor segmentation and communications-strategy roadmap over an 8-10 week engagement",
+    "tags": [
+      "strategy",
+      "market_research",
+      "project_management"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "180dc.md#engagement-a",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "180-F14",
+    "role": "consulting_180dc",
+    "fact": "Was a consultant, not the lead, on this engagement -- a senior 180DC colleague led it",
+    "tags": [
+      "teamwork"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "180dc.md#engagement-a",
+    "verified": true,
+    "notes": "Important accuracy note if asked to describe the engagement in an interview."
+  },
+  {
+    "id": "180-F15",
+    "role": "consulting_180dc",
+    "fact": "Identified a B2C/B2B dual donor structure: street fundraising and major-gift relationships",
+    "tags": [
+      "strategy",
+      "commercial",
+      "market_research"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "180dc.md#engagement-a",
+    "verified": true,
+    "notes": "Interview-only depth, e.g. the 0.5M to 1M major-giving segment doubling opportunity."
+  }
+]

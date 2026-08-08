@@ -1,0 +1,17 @@
+Rishwanth Katam
++49 176 8610 9845 | LinkedIn | rishwanth.katam@edu.escp.eu | Berlin, Germany
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Associate, Consumer Insights position at Bain & Company in London. As a Master in Management graduate from ESCP Business School with primary research experience across FMCG and consulting, I am eager to contribute to the AI, Insights & Solutions team.
+
+Most of my quantitative research experience comes from my time in Analytics & Insights at Procter & Gamble in Frankfurt. I owned a consumer survey end to end, from agreeing the question with senior stakeholders to setting three behavioural targeting constraints, briefing the provider and synthesising the results. The study surfaced an affinity-index opportunity among private label buyers that fed directly into customer strategy for a discounter account. I also designed a nationwide A/B test on YouTube ad frequency, where holding out for a more conclusive bin selection allowed a credible read and quantified a 4.2M EUR revenue uplift. That project taught me as much about defending a method as about running one.
+
+On the qualitative side, I worked on a live client project with Quantis, a BCG company, on why circular business models are difficult to sustain in fashion and sport. I synthesised seven senior interviews, including Adidas, The North Face and Vibram, into a diagnostic framework that managers could use to map their own business model against known enablers and barriers. Building something reusable, rather than answering one question once, is the part of research I find most satisfying.
+
+What draws me to Bain specifically is the commitment to rethinking how primary research is produced, with AI inside the process rather than alongside it. I have been building in this space in my own time. I self-host an n8n workflow with Ollama models that turns photographed invoices into structured, analysable data for my family's construction business. It is a small system, but it showed me where these tools genuinely speed up synthesis and where they quietly introduce error. I would like to bring that instinct to a team asking the same questions at a much larger scale.
+
+Thank you for considering my application. I look forward to hearing from you.
+
+Best regards,
+Rishwanth Katam

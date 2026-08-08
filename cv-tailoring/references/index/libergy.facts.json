@@ -1,0 +1,300 @@
+[
+  {
+    "id": "LIB-F01",
+    "role": "libergy",
+    "fact": "Built CSRD compliance module inside the platform: customer inputs details, platform generates the report",
+    "tags": [
+      "regulation",
+      "product",
+      "sustainability",
+      "automation"
+    ],
+    "has_bullet": "LIB-12",
+    "cv_suitable": true,
+    "source": "libergy.md#csrd-specifically",
+    "verified": true,
+    "notes": "Strongest Libergy asset for ESG and regtech roles."
+  },
+  {
+    "id": "LIB-F02",
+    "role": "libergy",
+    "fact": "Identified CSRD as the most pressing customer regulatory need among 6 regulations researched",
+    "tags": [
+      "regulation",
+      "commercial",
+      "prioritisation"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#csrd-specifically",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F03",
+    "role": "libergy",
+    "fact": "Researched CSRD implementation timelines differing by company size: large, SME, listed SME",
+    "tags": [
+      "regulation",
+      "sustainability"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#csrd-specifically",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F04",
+    "role": "libergy",
+    "fact": "Researched RED II targets: 32% renewable by 2030, 14% transport sub-target, 3.5% advanced biofuels",
+    "tags": [
+      "regulation",
+      "sustainability",
+      "policy"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#regulatory-research",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F05",
+    "role": "libergy",
+    "fact": "Researched EU ETS, BEHG, nEHS and EED alongside RED II and CSRD",
+    "tags": [
+      "regulation",
+      "sustainability",
+      "policy"
+    ],
+    "has_bullet": "LIB-06",
+    "cv_suitable": true,
+    "source": "libergy.md#regulatory-research",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F06",
+    "role": "libergy",
+    "fact": "Researched GLEC 3.0 transport GHG accounting and aligned product methodology to it",
+    "tags": [
+      "regulation",
+      "sustainability",
+      "product"
+    ],
+    "has_bullet": "LIB-08",
+    "cv_suitable": true,
+    "source": "libergy.md#glec-30-research",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F07",
+    "role": "libergy",
+    "fact": "Priced biofuel by benchmarking premium over diesel against carbon certificate cost for equivalent reduction",
+    "tags": [
+      "pricing",
+      "commercial",
+      "strategy"
+    ],
+    "has_bullet": "LIB-01",
+    "cv_suitable": true,
+    "source": "libergy.md#pricing-model",
+    "verified": true,
+    "notes": "Elegant, explainable pricing logic. Good whiteboard answer."
+  },
+  {
+    "id": "LIB-F08",
+    "role": "libergy",
+    "fact": "Decomposed the full biofuel value chain and summed cost contributions at each stage",
+    "tags": [
+      "pricing",
+      "analytics",
+      "supply_chain"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#pricing-model",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F09",
+    "role": "libergy",
+    "fact": "Self-taught Bubble and built a B2B customer-facing platform from scratch as a non-coder",
+    "tags": [
+      "product",
+      "no_code",
+      "learning_agility"
+    ],
+    "has_bullet": "LIB-02",
+    "cv_suitable": true,
+    "source": "libergy.md#digital-platform",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F10",
+    "role": "libergy",
+    "fact": "Built scope 3 allocation feature distributing emissions savings to downstream customers",
+    "tags": [
+      "sustainability",
+      "product",
+      "regulation"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#digital-platform",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F11",
+    "role": "libergy",
+    "fact": "Automated invoicing and sustainability certificate provision inside the platform",
+    "tags": [
+      "automation",
+      "product"
+    ],
+    "has_bullet": "LIB-02",
+    "cv_suitable": true,
+    "source": "libergy.md#digital-platform",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F12",
+    "role": "libergy",
+    "fact": "Benchmarked CO2 reporting tools of 10 companies to inform product design",
+    "tags": [
+      "market_research",
+      "product",
+      "sustainability"
+    ],
+    "has_bullet": "LIB-04",
+    "cv_suitable": true,
+    "source": "libergy.md#digital-platform",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F13",
+    "role": "libergy",
+    "fact": "Automated tender monitoring across 16 German platforms using Power Automate and CPV code filters",
+    "tags": [
+      "automation",
+      "commercial",
+      "public_sector"
+    ],
+    "has_bullet": "LIB-03",
+    "cv_suitable": true,
+    "source": "libergy.md#tender-monitoring-automation",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F14",
+    "role": "libergy",
+    "fact": "Documented handling logic per inbound channel and wrote a process guide for tender monitoring",
+    "tags": [
+      "documentation",
+      "process_improvement",
+      "automation"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#tender-monitoring-automation",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F15",
+    "role": "libergy",
+    "fact": "Built TCO/LCA model across 7 verticals: logistics, construction, agriculture, waste, industrial, public transport, public services",
+    "tags": [
+      "sustainability",
+      "analytics",
+      "commercial"
+    ],
+    "has_bullet": "LIB-07",
+    "cv_suitable": true,
+    "source": "libergy.md#tco--lca-model",
+    "verified": true,
+    "notes": "Corrected 2026-08-06 from '6 industries' -- verified against the actual Excel model. Shares core calc engine with the thesis model."
+  },
+  {
+    "id": "LIB-F16",
+    "role": "libergy",
+    "fact": "Researched data centres as a new non-traditional customer vertical",
+    "tags": [
+      "strategy",
+      "market_research",
+      "commercial"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "libergy.md#market-research",
+    "verified": true,
+    "notes": "Lateral market thinking. Underused fact."
+  },
+  {
+    "id": "LIB-F17",
+    "role": "libergy",
+    "fact": "Defined user personas and product objectives using the Double Diamond design process",
+    "tags": [
+      "product",
+      "market_research",
+      "design"
+    ],
+    "has_bullet": "LIB-13",
+    "cv_suitable": true,
+    "source": "libergy.md#user-needs-definition",
+    "verified": "check",
+    "notes": null
+  },
+  {
+    "id": "LIB-F18",
+    "role": "libergy",
+    "fact": "Participated in a 2-day lean canvas workshop defining USP, segmentation and roadmap for 3 new offerings",
+    "tags": [
+      "strategy",
+      "product"
+    ],
+    "has_bullet": "LIB-11",
+    "cv_suitable": true,
+    "source": "libergy.md#lean-canvas",
+    "verified": true,
+    "notes": "PARTICIPATED, never led. See facts.yaml."
+  },
+  {
+    "id": "LIB-F19",
+    "role": "libergy",
+    "fact": "Represented the company at a 70-person green energy summit for trend scouting and venture identification",
+    "tags": [
+      "communication",
+      "commercial",
+      "networking"
+    ],
+    "has_bullet": "LIB-09",
+    "cv_suitable": true,
+    "source": "libergy.md#events",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "LIB-F20",
+    "role": "libergy",
+    "fact": "Built full B2B sales deck including storyboard, CTA and digital product offering",
+    "tags": [
+      "communication",
+      "commercial",
+      "strategy"
+    ],
+    "has_bullet": "LIB-05",
+    "cv_suitable": true,
+    "source": "libergy.md#sales-pitch-deck",
+    "verified": true,
+    "notes": null
+  }
+]

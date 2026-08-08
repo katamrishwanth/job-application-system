@@ -1,0 +1,146 @@
+[
+  {
+    "id": "QNT-F01",
+    "role": "quantis",
+    "fact": "Contacted 75+ companies to secure 5 interviews for the research",
+    "tags": [
+      "persistence",
+      "cold_outreach",
+      "market_research",
+      "resilience"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "quantis.md#methodology",
+    "verified": true
+  },
+  {
+    "id": "QNT-F02",
+    "role": "quantis",
+    "fact": "Interviewed Vibram (Italy) - Sustainability Director - Longevity & Durability model",
+    "tags": [
+      "market_research",
+      "sustainability",
+      "manufacturing"
+    ],
+    "has_bullet": "QNT-01",
+    "cv_suitable": true,
+    "source": "quantis.md#the-interviews",
+    "verified": true
+  },
+  {
+    "id": "QNT-F03",
+    "role": "quantis",
+    "fact": "Interviewed Adidas Director Innovation Management on the Made to be Remade programme",
+    "tags": [
+      "market_research",
+      "sustainability",
+      "manufacturing",
+      "brand_recognition"
+    ],
+    "has_bullet": "QNT-01",
+    "cv_suitable": true,
+    "source": "quantis.md#the-interviews",
+    "verified": true
+  },
+  {
+    "id": "QNT-F04",
+    "role": "quantis",
+    "fact": "One of the 7 expert interviews was an OECD policy expert",
+    "tags": [
+      "policy",
+      "regulation",
+      "public_sector",
+      "institutional"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "quantis.md#the-interviews",
+    "verified": true
+  },
+  {
+    "id": "QNT-F05",
+    "role": "quantis",
+    "fact": "Built diagnostic framework by combining the Sustainable Business Model Canvas with the RCOV framework",
+    "tags": [
+      "framework_design",
+      "strategy",
+      "methodology"
+    ],
+    "has_bullet": "QNT-03",
+    "cv_suitable": true,
+    "source": "quantis.md#methodology",
+    "verified": true
+  },
+  {
+    "id": "QNT-F06",
+    "role": "quantis",
+    "fact": "Project built directly on a 2022 Quantis x ESCP project, extending prior insights into an actionable diagnostic tool",
+    "tags": [
+      "continuity",
+      "research_design",
+      "strategy"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "quantis.md#research-question",
+    "verified": true,
+    "notes": "Good for interview: shows understanding of building on prior work rather than starting from zero."
+  },
+  {
+    "id": "QNT-F07",
+    "role": "quantis",
+    "fact": "Identified 5 top barriers to circular business models, including unpredictable take-back capacity planning and low recycling tech maturity",
+    "tags": [
+      "sustainability",
+      "analytics",
+      "supply_chain"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "quantis.md#findings",
+    "verified": true
+  },
+  {
+    "id": "QNT-F08",
+    "role": "quantis",
+    "fact": "Proactively disclosed the framework's own limitation: descriptive but not yet analytically deep",
+    "tags": [
+      "intellectual_honesty",
+      "communication",
+      "consulting"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "quantis.md#findings",
+    "verified": true,
+    "notes": "Strong interview answer for 'tell me about a limitation of your own work' -- shows candour, not a CV line."
+  },
+  {
+    "id": "QNT-F09",
+    "role": "quantis",
+    "fact": "Interviews were conducted as a team; synthesis, not solo interviewing, is the accurate framing",
+    "tags": [
+      "teamwork",
+      "consulting"
+    ],
+    "has_bullet": "QNT-01",
+    "cv_suitable": true,
+    "source": "quantis.md#claim-guardrails",
+    "verified": true
+  },
+  {
+    "id": "QNT-F10",
+    "role": "quantis",
+    "fact": "Student team was 6 people, not 7 -- verified from the report's own title page",
+    "tags": [
+      "teamwork",
+      "accuracy"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "quantis.md#claim-guardrails",
+    "verified": true,
+    "notes": "Correction, not a differentiator. The 7 that IS correct is expert interviews -- do not conflate."
+  }
+]

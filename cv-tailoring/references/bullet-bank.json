@@ -1,0 +1,1279 @@
+{
+  "meta": {
+    "owner": "Rishwanth Katam",
+    "generated": "2026-08-05",
+    "source_of_truth": "facts.yaml",
+    "counts": {
+      "total": 53,
+      "in_range": 19,
+      "needs_trim": 32,
+      "needs_pad": 2,
+      "unverified": 2
+    },
+    "usage": "Select by role + theme overlap with JD, then trim/pad to target_range. Never invent; if no bullet fits, say so."
+  },
+  "theme_taxonomy": [
+    "analytics",
+    "experimentation",
+    "market_research",
+    "strategy",
+    "pricing",
+    "commercial",
+    "sustainability",
+    "regulation",
+    "automation",
+    "ai_ml",
+    "data_infrastructure",
+    "product",
+    "stakeholder_management",
+    "leadership",
+    "project_management",
+    "communication"
+  ],
+  "bullets": [
+    {
+      "id": "PG-01",
+      "role": "pg",
+      "text": "Ran nationwide YT ad frequency A/B test; attributed +€4.2M revenue uplift and shaped media investment priorities for OND 2025.",
+      "type": "work",
+      "themes": [
+        "experimentation",
+        "analytics",
+        "commercial"
+      ],
+      "metric": "+€4.2M revenue uplift",
+      "source": "CV-A",
+      "verified": true,
+      "notes": "Strongest single metric. Nationwide YouTube frequency test, NOT discounter-targeted.",
+      "chars": 126,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 11,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-02",
+      "role": "pg",
+      "text": "Diagnosed Always Discreet discounter gap via ABC analysis + store visit mapping; recommended SKU addition with est. +€1–2M NOS upside.",
+      "type": "work",
+      "themes": [
+        "analytics",
+        "strategy",
+        "commercial"
+      ],
+      "metric": "est. +€1-2M NOS upside",
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 134,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 19,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-03",
+      "role": "pg",
+      "text": "Executed behavioural consumer survey (3-panel targeting) to map purchase drivers; surfaced affinity-index whitespace opportunities at Lidl.",
+      "type": "work",
+      "themes": [
+        "market_research",
+        "analytics"
+      ],
+      "metric": null,
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 139,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 24,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-04",
+      "role": "pg",
+      "text": "Rebuilt discounter sellout data model with Nielsen + DevOps teams; corrected 30–80% misrepresentation in business KPIs across DACH.",
+      "type": "work",
+      "themes": [
+        "data_infrastructure",
+        "analytics",
+        "stakeholder_management"
+      ],
+      "metric": "30-80% KPI misrepresentation corrected",
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 131,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 16,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-05",
+      "role": "pg",
+      "text": "Mapped and restructured DACH analytics toolset across 8+ data sources; saved est. 720 hrs/year by improving tool accessibility.",
+      "type": "work",
+      "themes": [
+        "data_infrastructure",
+        "project_management"
+      ],
+      "metric": "est. 720 hrs/year saved",
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 127,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 12,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-06",
+      "role": "pg",
+      "text": "Diagnosed discounter performance gap; built recommendation deck with assortment, promo, and in-store execution measures for Lidl and Aldi.",
+      "type": "work",
+      "themes": [
+        "analytics",
+        "strategy",
+        "communication"
+      ],
+      "metric": null,
+      "source": "CV-C",
+      "verified": true,
+      "notes": null,
+      "chars": 138,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 23,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-07",
+      "role": "pg",
+      "text": "Mapped analytics tool needs across commercial functions via 1:1 interviews; restructured A&I Hub saving est. 720 hrs/year organisation-wide.",
+      "type": "work",
+      "themes": [
+        "data_infrastructure",
+        "stakeholder_management"
+      ],
+      "metric": "est. 720 hrs/year saved",
+      "source": "CV-C",
+      "verified": true,
+      "notes": null,
+      "chars": 140,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 25,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-08",
+      "role": "pg",
+      "text": "Delivered NielsenIQ, YouGov, and Kantar-based consumer insights across DACH categories; shaped discounter channel strategy for key brands.",
+      "type": "work",
+      "themes": [
+        "market_research",
+        "strategy"
+      ],
+      "metric": null,
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 138,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 23,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-09",
+      "role": "pg",
+      "text": "Mapped cross-functional data needs via 1:1s, supporting internal programs to improve productivity & efficiency.",
+      "type": "work",
+      "themes": [
+        "project_management",
+        "stakeholder_management"
+      ],
+      "metric": null,
+      "source": "sample-VFG",
+      "verified": true,
+      "notes": null,
+      "chars": 111,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-10",
+      "role": "pg",
+      "text": "Translated business needs into tech requirements for DevOps, enabling structured cross-functional execution.",
+      "type": "work",
+      "themes": [
+        "data_infrastructure",
+        "stakeholder_management",
+        "project_management"
+      ],
+      "metric": null,
+      "source": "sample-VFG",
+      "verified": true,
+      "notes": null,
+      "chars": 108,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-11",
+      "role": "pg",
+      "text": "Kept senior stakeholders updated and delivered on time, ensuring progress tracking against business targets.",
+      "type": "work",
+      "themes": [
+        "project_management",
+        "stakeholder_management"
+      ],
+      "metric": null,
+      "source": "sample-VFG",
+      "verified": true,
+      "notes": null,
+      "chars": 108,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-12",
+      "role": "pg",
+      "text": "Conducted quantitative analyses across categories and developed presentations for brand strategy decisions.",
+      "type": "work",
+      "themes": [
+        "analytics",
+        "communication"
+      ],
+      "metric": null,
+      "source": "sample-B",
+      "verified": true,
+      "notes": null,
+      "chars": 107,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-13",
+      "role": "pg",
+      "text": "Delivered full cashback promo analysis in 1 day under deadline pressure; identified key outcomes and survey design improvements.",
+      "type": "work",
+      "themes": [
+        "analytics",
+        "commercial"
+      ],
+      "metric": null,
+      "source": "profile",
+      "verified": true,
+      "notes": "From profile (BP Cashback). Not yet on any CV. Good for 'works at pace' signals.",
+      "chars": 128,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 13,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PG-14",
+      "role": "pg",
+      "text": "Built Paper COT SharePoint hub with buy-in from BabyCare and FemCare functions; foundation set to save est. 3,000 hrs/year.",
+      "type": "work",
+      "themes": [
+        "data_infrastructure",
+        "stakeholder_management"
+      ],
+      "metric": "est. 3,000 hrs/year (foundation only)",
+      "source": "profile",
+      "verified": "check",
+      "notes": "CAUTION: profile states the 3,000 hrs/year saving was NOT yet delivered, only the foundation set up. Phrase as foundation, never as delivered saving. Confirm before use.",
+      "chars": 123,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 8,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-01",
+      "role": "libergy",
+      "text": "Priced biofuel product by modelling full value chain costs vs. carbon certificate benchmarks; defined competitive price band for B2B sales.",
+      "type": "work",
+      "themes": [
+        "pricing",
+        "commercial",
+        "strategy"
+      ],
+      "metric": null,
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 139,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 24,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-02",
+      "role": "libergy",
+      "text": "Built no-code B2B dashboard (Bubble) covering fuel orders, GHG tracking, CSRD reporting, and automated invoice and certificate provision.",
+      "type": "work",
+      "themes": [
+        "product",
+        "sustainability",
+        "automation"
+      ],
+      "metric": null,
+      "source": "CV-A",
+      "verified": true,
+      "notes": "B2B platform, not consumer-facing. Keep that distinction.",
+      "chars": 137,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 22,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-03",
+      "role": "libergy",
+      "text": "Automated tender monitoring across 16 German platforms via Power Automate; defined CPV-code filters to screen relevant public sector bids.",
+      "type": "work",
+      "themes": [
+        "automation",
+        "commercial"
+      ],
+      "metric": "16 platforms",
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 138,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 23,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-04",
+      "role": "libergy",
+      "text": "Conducted whitespace analysis and benchmarked 10 CO2-reporting tools across 6 verticals to shape go-to-market priorities.",
+      "type": "work",
+      "themes": [
+        "strategy",
+        "market_research",
+        "sustainability"
+      ],
+      "metric": "10 tools, 6 verticals",
+      "source": "CV-A",
+      "verified": true,
+      "notes": "'6 verticals' here is a SEPARATE claim from the TCO/LCA model's vertical count (corrected to 7 elsewhere) -- this one covers CO2-reporting-tool benchmarking, not the TCO/LCA model itself. No primary source confirms this figure either way. Rishwanth reviewed this 2026-08-06 and accepted it as-is: 'not a big deal if it turns out 7.' Left unchanged, not flagged further.",
+      "chars": 121,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 6,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-05",
+      "role": "libergy",
+      "text": "Built B2B sales pitch deck covering storyboard, digital product positioning, and CTA for clean-fuel customer acquisition.",
+      "type": "work",
+      "themes": [
+        "communication",
+        "commercial",
+        "strategy"
+      ],
+      "metric": null,
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 121,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 6,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-06",
+      "role": "libergy",
+      "text": "Researched EU climate regulations (RED II, EU ETS, BEHG, CSRD); built biofuel compliance tool and education deck for B2B clean-fuel clients.",
+      "type": "work",
+      "themes": [
+        "regulation",
+        "sustainability",
+        "product"
+      ],
+      "metric": null,
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 140,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 25,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-07",
+      "role": "libergy",
+      "text": "Built TCO/LCA model across 7 verticals to quantify biofuel GHG/cost trade-offs vs. diesel; outputs used directly in B2B sales decisions.",
+      "type": "work",
+      "themes": [
+        "sustainability",
+        "analytics",
+        "commercial"
+      ],
+      "metric": "6 industries",
+      "source": "CV-B",
+      "verified": true,
+      "notes": " CORRECTED 2026-08-06: 6 industries -> 7 verticals, verified against actual Excel model.",
+      "chars": 136,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 22,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-08",
+      "role": "libergy",
+      "text": "Researched GLEC 3.0 transport GHG accounting standards; aligned product methodology with international carbon reporting norms.",
+      "type": "work",
+      "themes": [
+        "regulation",
+        "sustainability",
+        "product"
+      ],
+      "metric": null,
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 126,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 11,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-09",
+      "role": "libergy",
+      "text": "Represented Libergy at 70-person green energy summit; engaged decision-makers and panellists on Europe's sustainable energy transition.",
+      "type": "work",
+      "themes": [
+        "communication",
+        "commercial"
+      ],
+      "metric": "70 attendees",
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 135,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 20,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-10",
+      "role": "libergy",
+      "text": "Conducted competitor analysis across product, customer, and geographic dimensions; shaped go-to-market priorities for clean-fuel B2B market.",
+      "type": "work",
+      "themes": [
+        "strategy",
+        "market_research"
+      ],
+      "metric": null,
+      "source": "CV-C",
+      "verified": true,
+      "notes": null,
+      "chars": 140,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 25,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-11",
+      "role": "libergy",
+      "text": "Contributed to 2-day lean canvas workshop defining USP and customer segmentation; shaped roadmap for 3 new product and service offerings.",
+      "type": "work",
+      "themes": [
+        "strategy",
+        "product"
+      ],
+      "metric": "3 new offerings",
+      "source": "CV-C (rewritten)",
+      "verified": true,
+      "notes": "REWRITTEN. Original CV-C said 'Led 2-day lean canvas workshop'. facts.yaml locks this as 'participated'. Use 'contributed to' / 'participated in', never 'led'.",
+      "chars": 137,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 22,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-12",
+      "role": "libergy",
+      "text": "Built CSRD reporting module inside the platform, turning regulation into guided questions and a generated compliance report.",
+      "type": "work",
+      "themes": [
+        "regulation",
+        "sustainability",
+        "product"
+      ],
+      "metric": null,
+      "source": "profile",
+      "verified": true,
+      "notes": "Strongest Libergy proof point for ESG/regulatory roles. Mechanism-led framing (regulation in, report out).",
+      "chars": 124,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 9,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "LIB-13",
+      "role": "libergy",
+      "text": "Defined user personas and product objectives via Double Diamond design process to shape the B2B platform roadmap.",
+      "type": "work",
+      "themes": [
+        "product",
+        "market_research"
+      ],
+      "metric": null,
+      "source": "profile",
+      "verified": "check",
+      "notes": null,
+      "chars": 113,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-01",
+      "role": "consulting_180dc",
+      "text": "Led a 6-person team delivering carbon impact recommendations, aligning stakeholders through analysis.",
+      "type": "work",
+      "themes": [
+        "leadership",
+        "sustainability",
+        "stakeholder_management"
+      ],
+      "metric": "6-person team",
+      "source": "CV-A/B",
+      "verified": true,
+      "notes": "The ONE genuine leadership claim. Spend leadership signalling here, not on Libergy.",
+      "chars": 101,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-02",
+      "role": "consulting_180dc",
+      "text": "Owned project scoping, client check-ins, & final delivery, maintaining cadence, risks, & decisions for execution.",
+      "type": "work",
+      "themes": [
+        "project_management",
+        "stakeholder_management"
+      ],
+      "metric": null,
+      "source": "CV-A/B",
+      "verified": true,
+      "notes": null,
+      "chars": 113,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-03",
+      "role": "consulting_180dc",
+      "text": "Fostered team culture through streamlined coordination across countries, functions, and time zones.",
+      "type": "work",
+      "themes": [
+        "leadership",
+        "project_management"
+      ],
+      "metric": null,
+      "source": "CV-A/B",
+      "verified": true,
+      "notes": null,
+      "chars": 99,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 0,
+      "under_by": 1,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-04",
+      "role": "consulting_180dc",
+      "text": "Mapped student carbon footprint across 5 European campuses; prioritised interventions by impact vs. effort across mobility, food, and commute.",
+      "type": "work",
+      "themes": [
+        "sustainability",
+        "strategy",
+        "analytics"
+      ],
+      "metric": "5 campuses",
+      "source": "CV-A/B",
+      "verified": true,
+      "notes": null,
+      "chars": 142,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 27,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-05",
+      "role": "consulting_180dc",
+      "text": "Benchmarked train vs. flight cost and emissions on 3 inter-campus routes; identified Paris–London as the most viable green travel shift.",
+      "type": "work",
+      "themes": [
+        "analytics",
+        "sustainability"
+      ],
+      "metric": "3 routes",
+      "source": "CV-A/B",
+      "verified": true,
+      "notes": null,
+      "chars": 136,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 21,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-06",
+      "role": "consulting_180dc",
+      "text": "Evaluated partnerships across 5 country campuses; delivered vendor recommendations with cost estimates and phased implementation guidance.",
+      "type": "work",
+      "themes": [
+        "strategy",
+        "commercial"
+      ],
+      "metric": "5 campuses",
+      "source": "CV-B/C",
+      "verified": true,
+      "notes": null,
+      "chars": 138,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 23,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "180-07",
+      "role": "consulting_180dc",
+      "text": "Converted research findings into board-ready strategy recommendations; influenced sustainability partnership decisions across 5 campuses.",
+      "type": "work",
+      "themes": [
+        "communication",
+        "strategy"
+      ],
+      "metric": "5 campuses",
+      "source": "CV-A",
+      "verified": true,
+      "notes": null,
+      "chars": 137,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 22,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "QNT-01",
+      "role": "quantis",
+      "text": "Synthesised 7 expert interviews with Adidas, The North Face and Vibram into a diagnostic framework for circular business models",
+      "type": "project",
+      "themes": [
+        "market_research",
+        "sustainability",
+        "strategy"
+      ],
+      "metric": "7 expert interviews",
+      "source": "BASF chat",
+      "verified": true,
+      "notes": "PREFERRED wording. 'expert interviews' is the locked framing (5 companies + 2 industry experts incl. OECD). Never 'conducted 7 company interviews'.",
+      "chars": 127,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "QNT-02",
+      "role": "quantis",
+      "text": "Diagnosed circular business model barriers in fashion and sports; synthesised 7 expert interviews into a structured framework.",
+      "type": "work",
+      "themes": [
+        "market_research",
+        "sustainability",
+        "strategy"
+      ],
+      "metric": "7 expert interviews",
+      "source": "CV-A/C (corrected)",
+      "verified": true,
+      "notes": "Original said 'senior interviews' — corrected to 'expert'.",
+      "chars": 126,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 11,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "QNT-03",
+      "role": "quantis",
+      "text": "Developed diagnostic framework mapping value proposition, activities, and stakeholder factors driving circular model success.",
+      "type": "work",
+      "themes": [
+        "strategy",
+        "sustainability"
+      ],
+      "metric": null,
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 125,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 10,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "QNT-04",
+      "role": "quantis",
+      "text": "Conducted qualitative research and synthesised 7 expert interviews to identify circular business model barriers.",
+      "type": "work",
+      "themes": [
+        "market_research",
+        "sustainability"
+      ],
+      "metric": "7 expert interviews",
+      "source": "sample-B",
+      "verified": true,
+      "notes": null,
+      "chars": 112,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PRJ-01",
+      "role": "prajjawala",
+      "text": "Developed investment case quantifying ₹386B industry inefficiency; secured ₹1M seed funding through data-driven pitch to angel investors.",
+      "type": "work",
+      "themes": [
+        "commercial",
+        "strategy",
+        "communication"
+      ],
+      "metric": "₹386B sized, ₹1M raised",
+      "source": "CV-A/C",
+      "verified": true,
+      "notes": null,
+      "chars": 137,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 22,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PRJ-02",
+      "role": "prajjawala",
+      "text": "Built IoT supply chain MVP using real-time consumption data; automated demand forecasting and reduced LPG inefficiency by 58%.",
+      "type": "work",
+      "themes": [
+        "product",
+        "analytics",
+        "automation"
+      ],
+      "metric": "58% inefficiency reduction",
+      "source": "CV-A/C",
+      "verified": true,
+      "notes": null,
+      "chars": 126,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 11,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "PRJ-03",
+      "role": "prajjawala",
+      "text": "Built IoT-based supply chain MVP for a green energy startup; cut inventory inefficiency 58% and secured ₹1M seed funding.",
+      "type": "work",
+      "themes": [
+        "product",
+        "commercial",
+        "analytics"
+      ],
+      "metric": "58%, ₹1M",
+      "source": "CV-B (merged)",
+      "verified": true,
+      "notes": "Use when Prajjawala is compressed to a single line.",
+      "chars": 121,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 6,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "THS-01",
+      "role": "thesis",
+      "text": "Built a 5-year TCO model for Diesel, HVO, and BEV long-haul HDVs, supporting strategic fuel-pathway decisions.",
+      "type": "thesis",
+      "themes": [
+        "sustainability",
+        "analytics"
+      ],
+      "metric": "5-year model, 3 pathways",
+      "source": "sample-C",
+      "verified": true,
+      "notes": null,
+      "chars": 110,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "THS-02",
+      "role": "thesis",
+      "text": "Conducted LCA across 3 fuel pathways, modelling lifecycle GHG/km with EU ETS sensitivity for decisions made.",
+      "type": "thesis",
+      "themes": [
+        "sustainability",
+        "analytics",
+        "regulation"
+      ],
+      "metric": "3 pathways",
+      "source": "sample-C",
+      "verified": true,
+      "notes": null,
+      "chars": 108,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "THS-03",
+      "role": "thesis",
+      "text": "Identified HVO as viable short term and BEV superior long term as costs fall and grids decarbonise in Germany.",
+      "type": "thesis",
+      "themes": [
+        "sustainability",
+        "strategy"
+      ],
+      "metric": null,
+      "source": "sample-C",
+      "verified": true,
+      "notes": null,
+      "chars": 110,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "THS-04",
+      "role": "thesis",
+      "text": "Built 5-year TCO model covering vehicle, energy, and infrastructure costs for German long-haul fleet operators.",
+      "type": "thesis",
+      "themes": [
+        "sustainability",
+        "analytics"
+      ],
+      "metric": null,
+      "source": "CV-B",
+      "verified": true,
+      "notes": null,
+      "chars": 111,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "THS-05",
+      "role": "thesis",
+      "text": "Modelled EU ETS sensitivity in a 5-year TCO/LCA analysis, supporting structured sustainability investment decisions.",
+      "type": "thesis",
+      "themes": [
+        "sustainability",
+        "regulation",
+        "analytics"
+      ],
+      "metric": null,
+      "source": "sample-B",
+      "verified": true,
+      "notes": null,
+      "chars": 116,
+      "target_range": [
+        100,
+        115
+      ],
+      "in_range": false,
+      "over_by": 1,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "N8N-01",
+      "role": "n8n_automation",
+      "text": "Site material data sat in handwritten books, blocking cost analysis; built a self-hosted n8n and AI agent workflow to digitise it",
+      "type": "project",
+      "themes": [
+        "automation",
+        "ai_ml",
+        "data_infrastructure"
+      ],
+      "metric": null,
+      "source": "BASF chat",
+      "verified": true,
+      "notes": "Top differentiator across every application so far. Lead the projects section with this.",
+      "chars": 129,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "N8N-02",
+      "role": "n8n_automation",
+      "text": "Invoice photos sent in a chat are now parsed into a Google Sheet where cost and material KPIs refresh with every new entry",
+      "type": "project",
+      "themes": [
+        "automation",
+        "ai_ml",
+        "analytics"
+      ],
+      "metric": null,
+      "source": "BASF chat",
+      "verified": true,
+      "notes": null,
+      "chars": 122,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "N8N-03",
+      "role": "n8n_automation",
+      "text": "Self-hosted the full stack on Ollama open-source models, running the entire automation at zero recurring software cost",
+      "type": "project",
+      "themes": [
+        "automation",
+        "ai_ml"
+      ],
+      "metric": "zero recurring cost",
+      "source": "profile",
+      "verified": true,
+      "notes": null,
+      "chars": 118,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": false,
+      "over_by": 0,
+      "under_by": 2,
+      "has_em_dash": false
+    },
+    {
+      "id": "MUM-01",
+      "role": "muma",
+      "text": "Interviewed 5 museum staff and visitors on overcrowding; synthesised 6 insights and mapped every stakeholder in the ecosystem",
+      "type": "project",
+      "themes": [
+        "market_research",
+        "product"
+      ],
+      "metric": "5 interviews, 6 insights",
+      "source": "BASF chat",
+      "verified": true,
+      "notes": null,
+      "chars": 125,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "MUM-02",
+      "role": "muma",
+      "text": "Translated those insights into 18 user stories and applied A* and GNN route optimisation to improve visitor flow and experience",
+      "type": "project",
+      "themes": [
+        "ai_ml",
+        "product"
+      ],
+      "metric": "18 user stories",
+      "source": "BASF chat",
+      "verified": true,
+      "notes": null,
+      "chars": 127,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "MUM-03",
+      "role": "muma",
+      "text": "Specified a GDPR compliance plan covering transparency, anonymisation and granular opt-out for all visitor location data",
+      "type": "project",
+      "themes": [
+        "ai_ml",
+        "regulation",
+        "product"
+      ],
+      "metric": null,
+      "source": "profile",
+      "verified": true,
+      "notes": "Use for roles touching Responsible AI or data governance.",
+      "chars": 120,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "MDY-01",
+      "role": "moodys",
+      "text": "Forecasted firm financials to assess profitability, credit performance and liquidity risk; won against top French schools",
+      "type": "project",
+      "themes": [
+        "analytics",
+        "commercial"
+      ],
+      "metric": null,
+      "source": "sample-A",
+      "verified": true,
+      "notes": "If promoted to Projects, REMOVE from Achievements to avoid duplication.",
+      "chars": 121,
+      "target_range": [
+        120,
+        130
+      ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+[
+  {
+    "id": "N8N-F01",
+    "role": "n8n_automation",
+    "fact": "Self-hosted an n8n and Ollama AI agent workflow turning invoice photos into a live analysis sheet",
+    "tags": [
+      "automation",
+      "ai_ml",
+      "data_infrastructure",
+      "initiative"
+    ],
+    "has_bullet": "N8N-01",
+    "cv_suitable": true,
+    "source": "projects.md#1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "N8N-F02",
+    "role": "n8n_automation",
+    "fact": "Ran the entire automation stack at zero recurring cost using self-hosting and open-source models",
+    "tags": [
+      "automation",
+      "ai_ml",
+      "cost_efficiency",
+      "infrastructure"
+    ],
+    "has_bullet": "N8N-03",
+    "cv_suitable": true,
+    "source": "projects.md#1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "N8N-F03",
+    "role": "n8n_automation",
+    "fact": "Replaced a handwritten site logbook that blocked any cost or budget-variance analysis",
+    "tags": [
+      "process_improvement",
+      "automation",
+      "analytics"
+    ],
+    "has_bullet": "N8N-01",
+    "cv_suitable": true,
+    "source": "projects.md#1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "N8N-F04",
+    "role": "n8n_automation",
+    "fact": "Structured the destination sheet so KPIs and analyses refresh automatically on every new entry",
+    "tags": [
+      "analytics",
+      "automation",
+      "data_infrastructure"
+    ],
+    "has_bullet": "N8N-02",
+    "cv_suitable": true,
+    "source": "projects.md#1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "N8N-F05",
+    "role": "n8n_automation",
+    "fact": "Chose self-hosting over paid APIs for cost control and keeping data local",
+    "tags": [
+      "infrastructure",
+      "judgment",
+      "ai_ml"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "projects.md#1",
+    "verified": true,
+    "notes": "Infrastructure decision-making, not just prompt use. Interview only."
+  },
+  {
+    "id": "MUM-F01",
+    "role": "muma",
+    "fact": "Specified a GNN predicting crowd density that outputs dynamic weights consumed by an A* pathfinder",
+    "tags": [
+      "ai_ml",
+      "technical",
+      "product"
+    ],
+    "has_bullet": "MUM-02",
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": "The actual technical idea is the INTERACTION between the two, not either alone."
+  },
+  {
+    "id": "MUM-F02",
+    "role": "muma",
+    "fact": "Proposed a hierarchical architecture with a base model plus per-museum fine-tuning layer",
+    "tags": [
+      "ai_ml",
+      "architecture",
+      "product"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": "Addresses cold-start for a new museum. On no current CV."
+  },
+  {
+    "id": "MUM-F03",
+    "role": "muma",
+    "fact": "Conducted 5 primary interviews and synthesised 6 insights using a persona/want/because/but framework",
+    "tags": [
+      "market_research",
+      "product",
+      "user_research"
+    ],
+    "has_bullet": "MUM-01",
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "MUM-F04",
+    "role": "muma",
+    "fact": "Mapped 10 stakeholder groups across the full museum ecosystem",
+    "tags": [
+      "stakeholder_management",
+      "product",
+      "ecosystem"
+    ],
+    "has_bullet": "MUM-01",
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "MUM-F05",
+    "role": "muma",
+    "fact": "Created 5 customer personas and developed 18 user stories as functional requirements",
+    "tags": [
+      "product",
+      "requirements",
+      "user_research"
+    ],
+    "has_bullet": "MUM-02",
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "MUM-F06",
+    "role": "muma",
+    "fact": "Designed a GDPR plan with transparency, anonymisation and granular opt-out for visitor location data",
+    "tags": [
+      "regulation",
+      "ai_ml",
+      "privacy",
+      "product"
+    ],
+    "has_bullet": "MUM-03",
+    "cv_suitable": true,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": "Designed in, not bolted on. Valuable for Responsible AI roles."
+  },
+  {
+    "id": "MUM-F07",
+    "role": "muma",
+    "fact": "Solved the crowd-density data problem by buying a data source at ~EUR 9/month rather than collecting it",
+    "tags": [
+      "judgment",
+      "build_vs_buy",
+      "product"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "projects.md#2",
+    "verified": true,
+    "notes": "Pragmatic build-vs-buy call. Interview only."
+  },
+  {
+    "id": "MDY-F01",
+    "role": "moodys",
+    "fact": "Won the Moody's Credit Rating Challenge 2023 among top French business schools",
+    "tags": [
+      "finance",
+      "analytics",
+      "competition"
+    ],
+    "has_bullet": "MDY-01",
+    "cv_suitable": true,
+    "source": "projects.md#3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "MDY-F02",
+    "role": "moodys",
+    "fact": "Forecasted firm financials assessing profitability, credit performance and liquidity risk",
+    "tags": [
+      "finance",
+      "analytics",
+      "forecasting"
+    ],
+    "has_bullet": "MDY-01",
+    "cv_suitable": true,
+    "source": "projects.md#3",
+    "verified": true,
+    "notes": null
+  }
+]

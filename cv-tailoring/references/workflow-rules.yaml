@@ -1,0 +1,178 @@
+# =============================================================
+# workflow-rules.yaml — mutable process & formatting rules
+# Last updated: 2026-08-05
+#
+# This file is DELIBERATELY separate from facts.yaml and evidence/.
+# facts.yaml + evidence/ = what is TRUE about Rishwanth. Changes need
+#   real justification (a corrected date, a confirmed skill).
+# workflow-rules.yaml = how we WORK. Changes are allowed on lighter
+#   evidence, and this is where article/source-driven improvements land.
+#
+# HARD RULE: an incoming article or source can only ever propose changes
+# to THIS file. It can never alter facts.yaml or evidence/*.md content.
+# =============================================================
+
+meta:
+  version: 1
+  status: "git not yet set up (2026-08-05) — see CHANGELOG.md for interim
+    tracking. Set up git BEFORE implementing the first article-driven
+    change, per explicit instruction."
+
+# =============================================================
+# TIER 1 — LOCKED
+# Explicitly stated by Rishwanth in a past session. Changing these needs
+# him to say so directly, not just "an article suggested it."
+# =============================================================
+locked:
+  - id: L01
+    rule: "Work experience bullets: 100-115 characters including spaces"
+    range: [100, 115]
+  - id: L02
+    rule: "Project/extracurricular bullets: 120-130 characters including spaces"
+    range: [120, 130]
+  - id: L03
+    rule: "Summary section: max 400 characters"
+    max: 400
+  - id: L04
+    rule: "No invented metrics; preserve all quantified outcomes exactly as sourced"
+  - id: L05
+    rule: "CAR or STAR format for bullets where applicable"
+  - id: L06
+    rule: "No em-dashes or other AI-style stylistic markers"
+  - id: L07
+    rule: "All outputs presented as ORIGINAL → REVISED pairs"
+  - id: L08
+    rule: "Character counts verified programmatically (script), never eyeballed"
+    note: "This rule exists BECAUSE it was violated live in this project
+      (invented '3 months' fact, six mis-counted validator test strings).
+      Treat every future violation as a process failure worth logging."
+  - id: L09
+    rule: "Cover letter length target: 75-85% of Rishwanth's own sample letters"
+    range_pct: [75, 85]
+
+# =============================================================
+# TIER 2 — INFERRED
+# Patterns observed repeating across past sessions but never explicitly
+# confirmed as a binding rule. Usable as defaults. If one doesn't fit a
+# specific application, say so rather than forcing it — and flag it for
+# Rishwanth to confirm or reject outright, rather than letting it silently
+# harden into a Tier 1 rule the way "B1 vs A2.1" or "led vs participated"
+# almost did.
+# =============================================================
+inferred:
+  - id: I01
+    rule: "Projects section sits AFTER Work Experience, not before"
+    basis: "Explicitly pushed back on in the Accenture session when a
+      reviewer suggested reordering — held as German CV convention."
+    confidence: high
+  - id: I02
+    rule: "If reordering projects above work experience is suggested by a
+      third party, prefer renaming the section (e.g. 'AI & Data Projects')
+      over structural reordering"
+    basis: "Accenture session"
+    confidence: medium
+  - id: I03
+    rule: "Within Projects, order reverse-chronologically once dates are added"
+    basis: "Accenture session"
+    confidence: medium
+  - id: I04
+    rule: "One-page CV target; practical line ceiling around 53 lines before
+      compression is required"
+    basis: "GO2 Markets session line-budget audit; FEV session 11-line cut"
+    confidence: medium
+    note: "This is a rough operating ceiling, not measured against every
+      template. Recount per document rather than assuming it holds exactly."
+  - id: I05
+    rule: "Summary should not repeat named projects/figures already in the
+      CV body; gesture at supporting experience at category level instead,
+      keep one concrete proof point"
+    basis: "HelloFresh session, explicit style discussion"
+    confidence: high
+  - id: I06
+    rule: "For roles with a hard German-language requirement, disclose
+      proactively rather than staying silent, and frame the disclosure
+      AFTER leading with substantive fit evidence"
+    basis: "Circonomit session"
+    confidence: high
+  - id: I07
+    rule: "3-4 bullets per work experience role is the typical range,
+      adjusted to available space and role priority"
+    basis: "consistent across nearly every session, never stated as a
+      fixed number"
+    confidence: medium
+  - id: I08
+    rule: "Skills section is rebuilt per-application from JD language, not
+      copied from Rishwanth's default order; irrelevant tools are actively
+      dropped, not just left unmentioned"
+    basis: "BASF, FEV sessions"
+    confidence: high
+
+# =============================================================
+# TIER 3 — RESEARCHED
+# Verified via the change_protocol below, using external sources, and
+# approved by Rishwanth after live validation. Unlike Tier 1 (personal
+# preference, stable) these describe current external practice (ATS
+# behavior, market convention) that can genuinely shift — flagged with a
+# verified_date so they get re-checked rather than treated as permanent.
+# =============================================================
+researched:
+  - id: R01
+    rule: "JD must-have keyword extraction (jd-recruiter-brief Part 1) splits
+      into two labeled sub-lists: atomic ATS keywords (short exact terms —
+      tools, software, certs, hard skills) and core requirement themes (the
+      fuller JD phrases, kept for fit-gap reasoning only, never copied onto
+      the CV verbatim)"
+    verified_date: "2026-08-06"
+    source_summary: "Web research across 9 general sources + DACH-specific
+      search. Consistent pattern despite commercial bias in several sources
+      (Jobscan, CareerBldr sell resume optimization): exact-match weighting
+      concentrates on atomic terms; broader sentences increasingly handled
+      by semantic/NLP matching, and literal JD-sentence copying reads poorly
+      to human reviewers regardless of ATS behavior."
+    dach_check: "No source gave German-ATS-specific matching depth (Personio,
+      SAP SuccessFactors, Softgarden). Confirmed BCG Platinion's own careers
+      portal runs on Avature, independently noted as used by Deloitte, KPMG,
+      Bain. Treat as reasonably transferable, not independently DACH-verified."
+    live_validation: "BCG Platinion Consultant Energy Utilities JD, 2026-08-06.
+      Atomic list surfaced a real evidence gap (zero support for SAP,
+      Salesforce, MS Dynamics, Powercloud, SIV, Wilken) that the full-sentence
+      format had obscured. Directly produced an honest NO-GO verdict."
+    revisit: "ATS/matching technology moves fast — re-verify if a future
+      session's results seem inconsistent with this, rather than assuming
+      it still holds indefinitely."
+
+
+# Past verdicts (Factworks GO 87.5%, Accenture GO 86%, Detecon BORDERLINE
+# 62%, Bain BORDERLINE, HelloFresh BORDERLINE ~65-70%) show a pattern but
+# no numeric threshold was ever confirmed by Rishwanth. Do not invent one.
+# Continue to reason case-by-case and state the coverage % transparently
+# rather than applying an unstated cutoff.
+# =============================================================
+go_no_go_threshold: not_locked
+
+# =============================================================
+# CHANGE PROTOCOL — applied whenever Rishwanth shares an article or
+# outside source proposing a workflow change
+# =============================================================
+change_protocol:
+  steps:
+    - "1. Extract the discrete, checkable claims from the source — most
+        articles contain 2-4 real recommendations inside a lot of padding."
+    - "2. Classify the source: independent recruiter/hiring data, ATS or
+        careers-product vendor (commercial interest in non-obvious advice),
+        careers coach (same), or academic/empirical study."
+    - "3. Corroborate against at least 2 independent sources that don't
+        cite each other. Check DACH-market applicability specifically —
+        most English-language CV advice is US-sourced and doesn't transfer
+        (photo conventions, length, dates, Zeugnis norms all differ)."
+    - "4. Classify the verdict per claim: adopt / adapt / reject / already_doing."
+    - "5. Price the change — which existing files/CVs need re-editing, and
+        roughly how much work that is."
+    - "6. Present findings + recommendation to Rishwanth. Implement ONLY
+        on his explicit approval."
+    - "7. Log the accepted change in CHANGELOG.md with source, corroboration,
+        rejected sub-claims and why, and cost paid."
+  never:
+    - "Never let a single-source claim silently become a Tier 1 locked rule."
+    - "Never apply a change to facts.yaml or evidence/*.md from this protocol
+        — those only change via direct factual correction from Rishwanth."

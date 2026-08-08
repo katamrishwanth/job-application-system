@@ -1,0 +1,122 @@
+[
+  {
+    "id": "PRJ-F01",
+    "role": "prajjawala",
+    "fact": "Sized a INR 386B annual industry inefficiency from component figures including INR 220B blocked inventory",
+    "tags": [
+      "market_sizing",
+      "commercial",
+      "analytics"
+    ],
+    "has_bullet": "PRJ-01",
+    "cv_suitable": true,
+    "source": "prajjawala.md#the-problem",
+    "verified": true,
+    "notes": "Bottom-up sizing from components, not top-down estimate."
+  },
+  {
+    "id": "PRJ-F02",
+    "role": "prajjawala",
+    "fact": "Secured INR 1M seed funding through a data-driven pitch to angel investors as a student",
+    "tags": [
+      "fundraising",
+      "commercial",
+      "communication"
+    ],
+    "has_bullet": "PRJ-01",
+    "cv_suitable": true,
+    "source": "prajjawala.md#investment-pitch",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PRJ-F03",
+    "role": "prajjawala",
+    "fact": "Built an IoT MVP using consumption and logistics data; reduced inventory inefficiency by 58%",
+    "tags": [
+      "product",
+      "analytics",
+      "automation",
+      "iot"
+    ],
+    "has_bullet": "PRJ-02",
+    "cv_suitable": true,
+    "source": "prajjawala.md#the-mvp",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PRJ-F04",
+    "role": "prajjawala",
+    "fact": "Designed a pay-per-use pricing model with weight-based sensors to solve an affordability problem",
+    "tags": [
+      "pricing",
+      "product",
+      "business_model"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "prajjawala.md#the-solution",
+    "verified": true,
+    "notes": "Solved affordability via pricing-model change, not just technology. Underused."
+  },
+  {
+    "id": "PRJ-F05",
+    "role": "prajjawala",
+    "fact": "Built automated demand registration triggering real-time booking below a threshold",
+    "tags": [
+      "automation",
+      "product",
+      "forecasting"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "prajjawala.md#the-solution",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PRJ-F06",
+    "role": "prajjawala",
+    "fact": "Defined a B2B model targeting 3 public oil marketing companies and ~20,000 dealers",
+    "tags": [
+      "business_model",
+      "commercial",
+      "b2b"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "prajjawala.md#business-model",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PRJ-F07",
+    "role": "prajjawala",
+    "fact": "Built the pitch covering market sizing, competitive landscape, revenue model, projections and exit strategy",
+    "tags": [
+      "commercial",
+      "strategy",
+      "communication"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "prajjawala.md#investment-pitch",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PRJ-F08",
+    "role": "prajjawala",
+    "fact": "Earliest instance of a repeating pattern: found a broken manual process, quantified it, built a system",
+    "tags": [
+      "pattern",
+      "initiative"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "prajjawala.md#interview_only",
+    "verified": true,
+    "notes": "Same shape as the n8n project 4 years later. Strong narrative thread for interviews."
+  }
+]

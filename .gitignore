@@ -1,0 +1,73 @@
+# .gitignore — Rishwanth's job-application workflow repo
+#
+# This repo holds only the four job-application skills: cv-tailoring,
+# cover-letter, jd-recruiter-brief, application-qa. They are copied here from
+# the Claude app's skills folder by sync-and-commit.sh — see GIT_WORKFLOW.md.
+#
+# Anthropic's bundled skills (docx, pdf, pptx, xlsx, skill-creator, morning,
+# schedule, setup-cowork, consolidate-memory, explain-usage) live alongside
+# these in the app folder but are deliberately NOT copied here: they are not
+# Rishwanth's content, they are updated by app syncs rather than by the
+# change_protocol, and they would add ~208 files (mostly OOXML .xsd schemas)
+# that would bury real workflow diffs in `git log`. They are excluded by the
+# sync script, so they need no rule here.
+#
+# Everything below is either regenerated output or machine noise. None of it
+# belongs in a log meant to read as a provenance audit trail.
+
+
+# ---------------------------------------------------------------------------
+# Python bytecode caches — regenerated on every run of validate.py,
+# build_bank.py and build_index.py. Tracking them would produce a diff on
+# every validation run, which is not a workflow change.
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+
+# ---------------------------------------------------------------------------
+# Build / distribution output — packaged skill bundles (e.g. from
+# skill-creator's package_skill.py) and archives of this tree. All derived
+# from tracked sources, so never the source of truth for a fact or a rule.
+# ---------------------------------------------------------------------------
+dist/
+build/
+*.egg-info/
+*.zip
+*.tar.gz
+
+
+# ---------------------------------------------------------------------------
+# Generated per-application documents — tailored CVs and cover letters
+# produced for a specific job. These are outputs, not system state. The three
+# master CVs under cv-tailoring/assets/ ARE tracked, because they are inputs.
+# Delete these rules if you later decide to version submitted applications.
+# ---------------------------------------------------------------------------
+/output/
+/applications/
+
+
+# ---------------------------------------------------------------------------
+# macOS Finder metadata — written into any browsed folder. Excluded by the
+# sync script too, belt and braces. Never content.
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+
+# ---------------------------------------------------------------------------
+# Editor scratch files.
+# ---------------------------------------------------------------------------
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

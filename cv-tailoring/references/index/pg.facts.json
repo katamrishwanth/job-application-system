@@ -1,0 +1,374 @@
+[
+  {
+    "id": "PG-F01",
+    "role": "pg",
+    "fact": "Ran nationwide long-form YouTube ad frequency A/B test; unlocked EUR 4.2M SOP potential for BabyCare",
+    "tags": [
+      "experimentation",
+      "analytics",
+      "media",
+      "commercial"
+    ],
+    "has_bullet": "PG-01",
+    "cv_suitable": true,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F02",
+    "role": "pg",
+    "fact": "Pushed the team to wait for a more conclusive bin selection rather than proceed prematurely",
+    "tags": [
+      "judgment",
+      "rigour",
+      "stakeholder_management",
+      "disagreement"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": "Best 'time you disagreed with a team' answer available. Interview only."
+  },
+  {
+    "id": "PG-F03",
+    "role": "pg",
+    "fact": "Upskilled in basic Python and MS Azure in a short timeframe to run the Test & Control analysis",
+    "tags": [
+      "learning_agility",
+      "technical"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F04",
+    "role": "pg",
+    "fact": "Documented and handed over post-analysis to a colleague with structured detail",
+    "tags": [
+      "documentation",
+      "handover",
+      "project_management"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F05",
+    "role": "pg",
+    "fact": "Coordinated 5 named Nielsen contacts across POD data, historical mapping, methodology, coverage and delivery",
+    "tags": [
+      "vendor_management",
+      "stakeholder_management",
+      "data_infrastructure"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F06",
+    "role": "pg",
+    "fact": "Collaborated with the DevOps team at Lingaro Group in Poland; proposed 2 implementation approaches",
+    "tags": [
+      "vendor_management",
+      "data_infrastructure",
+      "technical_translation"
+    ],
+    "has_bullet": "PG-10",
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F07",
+    "role": "pg",
+    "fact": "Negotiated with Nielsen to maximise data access within timeline constraints",
+    "tags": [
+      "negotiation",
+      "vendor_management",
+      "commercial"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F08",
+    "role": "pg",
+    "fact": "Corrected 30-80% under/over-representation in discounter sellout data across DACH",
+    "tags": [
+      "data_infrastructure",
+      "analytics",
+      "data_quality"
+    ],
+    "has_bullet": "PG-04",
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F09",
+    "role": "pg",
+    "fact": "Configured data in OctoPaGe and Axon with MM team and Seven Seven Global Services to prevent data misuse",
+    "tags": [
+      "data_governance",
+      "data_infrastructure",
+      "vendor_management"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F10",
+    "role": "pg",
+    "fact": "Mapped tool needs via 1:1 interviews across functions; restructured A&I Hub for est. 720 hrs/year saving",
+    "tags": [
+      "stakeholder_management",
+      "data_infrastructure",
+      "process_improvement"
+    ],
+    "has_bullet": "PG-05",
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F11",
+    "role": "pg",
+    "fact": "Proposed a chat assistant to help users select the right analytics tool, scoped post-Copilot rollout",
+    "tags": [
+      "ai_ml",
+      "product",
+      "process_improvement"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": true,
+    "notes": "Only P&G fact touching AI product thinking. Valuable for AI strategy roles."
+  },
+  {
+    "id": "PG-F12",
+    "role": "pg",
+    "fact": "Built Paper COT SharePoint hub with buy-in from BabyCare and FemCare; foundation est. 3,000 hrs/year",
+    "tags": [
+      "stakeholder_management",
+      "data_infrastructure"
+    ],
+    "has_bullet": "PG-14",
+    "cv_suitable": true,
+    "source": "pg.md#project-2",
+    "verified": "check",
+    "notes": "Saving NOT delivered, foundation only. Phrase accordingly."
+  },
+  {
+    "id": "PG-F13",
+    "role": "pg",
+    "fact": "Found the ABC Assortment Booster tool's limitations and re-ran the full analysis from scratch",
+    "tags": [
+      "rigour",
+      "judgment",
+      "analytics"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": "Shows not trusting tool output blindly. Interview only."
+  },
+  {
+    "id": "PG-F14",
+    "role": "pg",
+    "fact": "Manually mapped every private label SKU using FastMart data, store visits and desk research",
+    "tags": [
+      "analytics",
+      "fieldwork",
+      "persistence"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F15",
+    "role": "pg",
+    "fact": "Recommended adding the Ultimate Night size to discounter shelf range; est. +EUR 1-2M NOS upside",
+    "tags": [
+      "analytics",
+      "commercial",
+      "category_management"
+    ],
+    "has_bullet": "PG-02",
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F16",
+    "role": "pg",
+    "fact": "Used all 3 behavioural purchase constraints for survey targeting, the most sophisticated use of the panel",
+    "tags": [
+      "market_research",
+      "survey_design"
+    ],
+    "has_bullet": "PG-03",
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F17",
+    "role": "pg",
+    "fact": "Proactively proposed a dummy survey first to preview quality before full execution",
+    "tags": [
+      "rigour",
+      "survey_design",
+      "initiative"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": "Shows anticipating quality risk. Interview only."
+  },
+  {
+    "id": "PG-F18",
+    "role": "pg",
+    "fact": "Found affinity-index opportunity capturing drug store private label buyers at Lidl",
+    "tags": [
+      "market_research",
+      "analytics",
+      "commercial"
+    ],
+    "has_bullet": "PG-03",
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F19",
+    "role": "pg",
+    "fact": "Identified 55+ competitor brand loyalists as an awareness-driven acquisition opportunity",
+    "tags": [
+      "market_research",
+      "segmentation",
+      "commercial"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F20",
+    "role": "pg",
+    "fact": "Self-upskilled on brand building via How Brands Grow; applied double jeopardy law to frame recommendations",
+    "tags": [
+      "learning_agility",
+      "brand_strategy",
+      "market_research"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": "Independent learning applied to real work. Strong interview material."
+  },
+  {
+    "id": "PG-F21",
+    "role": "pg",
+    "fact": "Delivered a full cashback promo analysis in 1 day under deadline pressure",
+    "tags": [
+      "pace",
+      "analytics",
+      "commercial"
+    ],
+    "has_bullet": "PG-13",
+    "cv_suitable": true,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F22",
+    "role": "pg",
+    "fact": "Learned to push teams to define the decision they are making, not just the analysis they request",
+    "tags": [
+      "consulting",
+      "stakeholder_management",
+      "judgment"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": "Most consulting-relevant lesson from the internship. Interview only."
+  },
+  {
+    "id": "PG-F23",
+    "role": "pg",
+    "fact": "Drove optimisation of promo plan and quota pack size benefits at a key account",
+    "tags": [
+      "commercial",
+      "analytics"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "pg.md#project-3",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F24",
+    "role": "pg",
+    "fact": "Delivered NielsenIQ, YouGov and Kantar market intelligence shaping DACH discounter channel strategy",
+    "tags": [
+      "market_research",
+      "strategy"
+    ],
+    "has_bullet": "PG-08",
+    "cv_suitable": true,
+    "source": "pg.md#tools-used",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "PG-F25",
+    "role": "pg",
+    "fact": "Prepared the first market and shopper data insights for a Lidl customer meeting, reused for Aldi",
+    "tags": [
+      "market_research",
+      "communication",
+      "commercial"
+    ],
+    "has_bullet": "PG-06",
+    "cv_suitable": true,
+    "source": "pg.md#project-1",
+    "verified": true,
+    "notes": null
+  }
+]
