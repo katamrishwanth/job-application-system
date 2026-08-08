@@ -1,123 +1,134 @@
 # Git workflow — job application system
 
 The point of this repo is **provenance**, not backup. `git log` is meant to be
-read by a human, top to bottom, as the history of why this system says what it
-says. Every commit should answer: what changed, on whose authority, and what it
-cost.
+read top to bottom as the history of why this system says what it says. Every
+commit should answer: what changed, on whose authority, and what it cost.
 
-`CHANGELOG.md` remains the primary human-facing record. Git adds the three
-things a changelog structurally cannot do: restore prior file *content*, prove
-that `facts.yaml` and `evidence/` have not silently drifted, and timestamp what
-a claim said on the day it went onto a submitted CV.
+`CHANGELOG.md` stays the primary human-facing record. Git adds the three things
+a changelog structurally cannot do: restore prior file *content*, prove that
+`facts.yaml` and `evidence/` have not silently drifted, and timestamp what a
+claim said on the day it went onto a submitted CV.
 
 ---
 
-## Where this repo lives
+## The one command
 
-Repo root is the Claude app's skills directory:
+After Rishwanth approves a change and the `CHANGELOG.md` entry is written:
+
+```bash
+~/Documents/job-application-system/sync-and-commit.sh
+```
+
+That copies the skills out of the Claude app folder, makes one commit using the
+newest CHANGELOG entry as the message, and pushes to private GitHub. It refuses
+to run when nothing changed, so running it twice is harmless. `--dry-run` shows
+what would happen without committing.
+
+This is step 8 of `change_protocol` in `workflow-rules.yaml`.
+
+---
+
+## Why the repo is in Documents and not with the skills
+
+The skills run from inside the Claude app's data folder:
 
 ```
-~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/c9caca1d-5ea4-44d0-adcf-b708df692cb0/e23955f7-0f0c-4e56-9dfe-31648e7c557d/skills/
+~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/c9caca1d-…/e23955f7-…/skills/
 ```
 
-This is the live directory the skills actually run from, so there is **no copy
-step** — what you commit is exactly what executed.
+A repo was initialised there first. **The app's sync deleted `.git` within about
+90 minutes** (2026-08-08, ~23:25, alongside a `manifest.json` rewrite). Ordinary
+files were left untouched; only the repo was removed. So a repo cannot live
+there, and `sync-and-commit.sh` copies files out instead.
 
-Two things to know about this location:
+Note the folder path itself is *stable* — those UUIDs are account and
+installation identifiers, unchanged since 2026-05-14, despite the
+`local-agent-mode-sessions` name. The problem was never the path. It was `.git`
+being deleted.
 
-1. **The UUIDs are stable, not per-session.** They have been unchanged since
-   2026-05-14, and the same pair appears in other app subtrees, so they are
-   account/installation identifiers despite the `local-agent-mode-sessions`
-   folder name.
-2. **It is a sync target.** `manifest.json` shows each skill carries a server
-   side `skillId` and `updatedAt`, meaning this folder is a local cache of
-   cloud-held skills. A future app sync could in principle overwrite files
-   here. Git is what makes that *visible* (`git status` would show it) and
-   *reversible* — but the repo itself is not yet backed up anywhere off this
-   machine. See "Remote" below.
+If the app ever does move the folder, the script fails loudly with instructions
+rather than committing a half-empty repo.
 
-Tracked: `cv-tailoring/`, `cover-letter/`, `jd-recruiter-brief/`,
-`application-qa/`. Everything else is ignored — see `.gitignore`, which
-explains each exclusion.
+### Open question: does editing files locally reach the Claude server?
+
+Unresolved, and it matters. `manifest.json` gives each skill a server-side
+`skillId` and `updatedAt`, and editing files locally did **not** bump
+`updatedAt` — suggesting sync may run server→local only. If so, a future sync
+could revert local edits, including step 8 itself.
+
+**To test:** open a new Claude session, invoke `cv-tailoring`, and ask it to
+quote step 8 of `change_protocol`. If it stops at step 7, the server copy won
+and the skill needs updating through Claude's own Skills interface rather than
+by editing files.
+
+Either way git makes a reversion *visible* — the next `sync-and-commit.sh` would
+show those files changing back — instead of silent.
 
 ---
 
 ## Committing an approved change
 
-Changes to this system are governed by `change_protocol` in
-`cv-tailoring/references/workflow-rules.yaml`. Git is step 8, after that
-protocol's step 7.
+Changes are governed by `change_protocol` in
+`cv-tailoring/references/workflow-rules.yaml`. Git is step 8, after step 7.
 
-**Only `workflow-rules.yaml` and skill files change this way.** `facts.yaml`
-and `evidence/*.md` are never edited by an article-driven workflow change — they
-change only when a primary source corrects them, which is a different kind of
-commit and should say so explicitly in its message.
+**Only `workflow-rules.yaml` and skill files change this way.** `facts.yaml` and
+`evidence/*.md` never change from an article-driven workflow change — they change
+only when a primary source corrects them, which is a different kind of commit
+and should say so plainly in its message.
 
-### The sequence
-
-1. Article or suggestion is analysed per `change_protocol` steps 1–5.
-2. Findings and recommendation presented to Rishwanth (step 6).
-3. **Implement only on his explicit approval.** No approval, no file edits, so
-   nothing to commit.
+1. Analyse the source per steps 1–5.
+2. Present findings and recommendation (step 6).
+3. **Implement only on explicit approval.** No approval, no edits, nothing to commit.
 4. Write the `CHANGELOG.md` entry — source, corroboration, rejected sub-claims
    and why, cost paid (step 7).
-5. Stage the edited files *and* the changelog together, and commit once, using
-   the full changelog entry as the message body:
-
-```bash
-git add -A && git commit -F <(printf '%s\n' "<paste the full CHANGELOG.md entry here>")
-```
-
-In practice the session doing the work should write the message to a temp file
-and commit with `git commit -F <file>`, so the entry keeps its formatting.
-
-6. Record the resulting hash back into that changelog entry's `**Revert:**`
-   line, replacing the "git not yet set up" placeholder, then amend:
-
-```bash
-git commit --amend --no-edit -a
-```
+5. Run `sync-and-commit.sh` (step 8).
 
 ### The commit message *is* the changelog entry
 
-Not a summary of it. The whole entry — What / Source / Corroboration /
-Rejected / Cost / Revert. First line is a short subject (`YYYY-MM-DD — <title>`),
-then a blank line, then the entry verbatim. This is what makes `git log` and
-`CHANGELOG.md` two views of one record rather than two records that can drift.
+Not a summary of it. The script takes the newest dated `## YYYY-MM-DD` section
+verbatim, so the log and the changelog cannot drift apart. Write the entry
+properly and the commit message takes care of itself.
 
 ### One commit per accepted change. Never squash.
 
-Each accepted change is one commit, even a one-line edit to a single rule. Do
-not batch two approved changes into one commit, do not squash on merge, do not
-rebase history that has been committed. Two changes accepted on the same day are
-two commits.
+One accepted change, one commit — even a one-line edit to a single rule. Don't
+batch two approved changes together, don't squash on merge, don't rebase
+committed history. Two changes accepted the same day are two commits.
 
-The log is the audit trail. A squashed commit destroys the mapping between a
-decision and its consequence, which is the only thing this repo exists to
-preserve.
+A squashed commit destroys the mapping between a decision and its consequence,
+which is the only thing this repo exists to preserve.
+
+### On recording commit hashes in the changelog
+
+The old `**Revert:**` lines say "git not yet set up". Deliberately, the script
+does **not** write hashes back into entries: amending a commit to add its own
+hash changes that hash, so the recorded value is always stale. Entries are
+identified by date and title, which are unique — find one with:
+
+```bash
+git log --oneline --grep="Two-tier keyword"
+```
 
 ---
 
 ## Branch strategy: commit directly to `main`
 
-No feature branches for article-driven changes. The reasoning:
+No feature branches for article-driven changes:
 
-- **The review gate is upstream.** `change_protocol` step 6 requires
-  Rishwanth's explicit approval *before* implementation. A branch would model a
-  review that has already happened in conversation — ceremony, not safety.
+- **The review gate is upstream.** Step 6 requires explicit approval *before*
+  implementation. A branch models a review that already happened in conversation.
 - **Single operator, no CI, no concurrent work.** Nothing to isolate against.
 - **Merge commits pollute a linear audit trail.** The log should read as a
   sequence of decisions, not a graph.
 
-**The one exception:** if a change needs to be trialled across several real
-applications before you commit to it, branch it:
+**One exception:** if a change needs trialling across several real applications
+before you commit to it:
 
 ```bash
 git switch -c trial/<short-name>
 ```
 
-Run live applications from that branch. If it holds up, merge with
-`--no-ff` so the trial period stays visible in the history; if it doesn't,
+Merge with `--no-ff` if it holds up, so the trial stays visible. If it doesn't,
 delete the branch and log the rejection in `CHANGELOG.md` anyway — a rejected
 trial is a finding worth keeping.
 
@@ -125,37 +136,32 @@ trial is a finding worth keeping.
 
 ## Automation
 
-Safe to automate, because the approval gate is upstream of any file edit: by the
-time anything on disk changes, it has already been accepted.
+Safe to automate, because the approval gate sits upstream of any file edit: by
+the time anything on disk changes, it has already been accepted.
 
-**Do not use a filesystem watcher.** It would fire on each save mid-edit,
-producing a burst of commits with generic messages, and it cannot carry the
-changelog entry — that entry is written at step 7, *after* the edits land. Both
-outcomes break "one commit per accepted change".
-
-Instead, make the commit the final action of the change workflow itself: once
-step 7 writes the changelog entry, the same session runs the commit with that
-entry as the message. That is automation triggered by *workflow completion*
-rather than by file modification time.
+**Do not add a filesystem watcher.** It fires on every save mid-edit, producing
+bursts of commits, and it cannot know the changelog text — that gets written at
+step 7, *after* the edits. You'd get `auto-commit 2026-08-09` as a message,
+which throws away the reason this repo exists. The trigger is workflow
+completion, not file modification time.
 
 ---
 
 ## Checking for drift
 
 The system's value rests on `facts.yaml` and `evidence/*.md` being trustworthy.
-Before relying on them for an application, confirm nothing has changed
-underneath you:
+Before relying on them:
 
 ```bash
-git status --short && git log --oneline -5
+cd ~/Documents/job-application-system && ./sync-and-commit.sh --dry-run
 ```
 
-A clean status means the facts are as last approved. Unexpected modifications to
-`facts.yaml` or `evidence/` should be investigated before submitting anything,
-not committed reflexively — the system exists to prevent fabrication, and an
-unexplained edit to a fact file is exactly the failure it guards against.
+"No changes" means the live skills match the last approved commit. Unexpected
+modifications to `facts.yaml` or `evidence/` should be investigated before
+submitting anything, not committed reflexively — this system exists to prevent
+fabrication, and an unexplained edit to a fact file is exactly that failure.
 
-To see what a claim said at the time it was used:
+To see what a claim said when it was used:
 
 ```bash
 git log -p --follow cv-tailoring/references/facts.yaml
@@ -165,16 +171,16 @@ git log -p --follow cv-tailoring/references/facts.yaml
 
 ## Remote
 
-Not configured. The repo currently lives only in a synced app cache directory,
-which means a folder-level reset would still lose the history.
+`origin` → `git@github.com:katamrishwanth/job-application-system.git` (private).
 
-Pushing to a private GitHub repo would close that gap. Note that these files
-contain personal career data — full employment evidence, reference letter
-content, and the contents of three master CVs — so this is a deliberate decision
-to make, not a default. Nothing has been pushed anywhere.
+Authentication is an SSH key at `~/.ssh/id_ed25519`, added to GitHub on
+2026-08-08. Private means visible only to Rishwanth and anyone explicitly
+invited — but the data does sit on GitHub's servers, including full employment
+evidence, reference-letter content and three master CVs. That was a deliberate
+choice, not a default.
 
-To add one when you decide to:
+To verify the remote is reachable:
 
 ```bash
-git remote add origin git@github.com:<user>/<private-repo>.git && git push -u origin main
+ssh -T git@github.com
 ```
