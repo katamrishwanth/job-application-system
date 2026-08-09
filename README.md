@@ -76,6 +76,20 @@ That makes one commit using the changelog entry as its message, and pushes.
 `--dry-run` shows the diff first. The Claude Desktop chat cannot run this — its
 sandbox has no access to the laptop.
 
+### Corrections that need no CHANGELOG entry
+
+Not every commit is an accepted workflow change. Typos, a stale sentence, an
+infrastructure fix — these get their own message instead:
+
+```bash
+~/Documents/job-application-system/sync-and-commit.sh -m "Fix stale export reference in SKILL.md"
+```
+
+The script **refuses to reuse a CHANGELOG entry that is already committed**.
+Without that guard, a commit made without a new entry silently inherits the
+previous one, and the log ends up claiming it did something it did not — which
+happened once, in `053b2b9`. Use `-m`, or write a real entry.
+
 ---
 
 ## Rules that matter
