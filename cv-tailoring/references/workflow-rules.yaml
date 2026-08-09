@@ -13,10 +13,12 @@
 # =============================================================
 
 meta:
-  version: 1
-  status: "git not yet set up (2026-08-05) — see CHANGELOG.md for interim
-    tracking. Set up git BEFORE implementing the first article-driven
-    change, per explicit instruction."
+  version: 2
+  status: "Git version control active since 2026-08-09. Repo on Rishwanth's
+    laptop at ~/Documents/job-application-system/, pushed to a private GitHub
+    repo. CHANGELOG.md remains the primary hand-written record and must still
+    be written for every accepted change — git versions it, it does not
+    replace it. Commit procedure: change_protocol step 8."
 
 # =============================================================
 # TIER 1 — LOCKED
@@ -172,6 +174,15 @@ change_protocol:
         on his explicit approval."
     - "7. Log the accepted change in CHANGELOG.md with source, corroboration,
         rejected sub-claims and why, and cost paid."
+    - "8. Commit the change. The git repo is on Rishwanth's laptop at
+        ~/Documents/job-application-system/ and pushes to private GitHub. Run
+        ~/Documents/job-application-system/sync-and-commit.sh — it reads the
+        skills, makes ONE commit using the new CHANGELOG entry as its message,
+        and pushes. If this session cannot run shell commands on his laptop,
+        say so explicitly and ask him to run it himself. One commit per
+        accepted change: never batch two, never squash — the log is the audit
+        trail. Never skip this silently: an uncommitted change leaves the
+        audit trail incomplete. Details in GIT_WORKFLOW.md."
   never:
     - "Never let a single-source claim silently become a Tier 1 locked rule."
     - "Never apply a change to facts.yaml or evidence/*.md from this protocol

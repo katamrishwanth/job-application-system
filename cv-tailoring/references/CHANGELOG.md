@@ -1,6 +1,8 @@
 # Changelog — Job Application Workflow
 
-Interim version tracking until git is set up. One entry per accepted change.
+The primary hand-written record of every accepted workflow change. Still
+written by hand for every change — git version-controls this file, it does not
+replace it. One entry per accepted change.
 Format: date, what changed, source/reasoning, cost paid, how to revert.
 
 ---
@@ -82,8 +84,9 @@ facts for any named platform — that the full-sentence format had obscured
 inside softer language. Directly produced an honest NO-GO verdict rather
 than a forced fit, which is the result this check exists to enable.
 
-**Revert:** git not yet set up. Restore prior wording of
-`task1-prompt.md` / `jd-recruiter-brief/SKILL.md` from this entry if needed.
+**Revert:** predates git, so it sits inside the baseline commit and git cannot
+isolate it. Restore prior wording of `task1-prompt.md` /
+`jd-recruiter-brief/SKILL.md` from this entry if needed.
 
 ---
 
@@ -133,7 +136,47 @@ reuse rather than treated as clean templates.
   previously-undocumented, nameable nonprofit engagement) is Rishwanth's
   call, not made here.
 
-**Revert:** git not yet set up. This entry documents every changed file.
+**Revert:** predates git; sits inside the baseline commit. This entry documents
+every changed file.
+
+---
+
+## 2026-08-09 — Git version control activated
+
+**What:** `workflow-rules.yaml` (`meta` block rewritten, version 1 → 2; new
+`change_protocol` step 8), `SKILL.md` (item 5 of external workflow-change
+handling rewritten; version-control note added), `CHANGELOG.md` (header and
+three stale "git not yet set up" lines corrected). On Rishwanth's laptop: git
+repo at `~/Documents/job-application-system/` with `.gitignore`,
+`GIT_WORKFLOW.md`, `sync-and-commit.sh`, `APPLY_TO_SERVER.md`, pushed to a
+private GitHub repo (katamrishwanth/job-application-system).
+
+**Source:** Rishwanth's direct instruction. One-time setup that this protocol
+itself required before the first article-driven change could be accepted.
+
+**Corroboration:** n/a — infrastructure, not an external claim about hiring
+practice. No fact or CV content is affected.
+
+**Rejected:**
+- *Git repo inside the local skills cache folder.* Tried first. The Claude app
+  deleted `.git` within ~90 minutes (2026-08-08 23:25). Ordinary files
+  survived; only the repo was removed.
+- *Editing skill files on the laptop.* Tried second. That folder is a
+  download-only cache; edits are invisible to the running skill, which loads
+  from the server. Verified by exporting the four `.skill` archives and
+  diffing, and confirmed functionally — a fresh session reported the steps
+  list ending at 7. Hence this change is applied from a Desktop chat instead.
+- *A filesystem watcher auto-committing on save.* Would fire mid-edit producing
+  bursts of commits, and could not use the CHANGELOG entry as the message,
+  which is the whole point of the log.
+
+**Cost:** 3 files edited in cv-tailoring. No changes to `facts.yaml`, any
+`evidence/*.md`, any `index/*.facts.json`, or `bullet-bank.json`. No re-editing
+of submitted CVs. Adds an export-and-run step at the end of each accepted
+change.
+
+**Revert:** `git log --oneline --grep="Git version control activated"`, then
+`git revert` that commit.
 
 ---
 
@@ -147,6 +190,5 @@ reuse rather than treated as clean templates.
 **Corroboration:** <other sources checked, DACH-applicability note>
 **Rejected:** <any sub-claims from the source NOT adopted, and why>
 **Cost:** <what had to be re-edited>
-**Revert:** <git hash once git exists, or "restore <file> from this entry's
-  pre-change copy">
+**Revert:** <find the commit with: git log --oneline --grep="<short title>">
 ```

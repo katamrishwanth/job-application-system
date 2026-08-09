@@ -50,6 +50,13 @@ generated draft alter them.
 **`workflow-rules.yaml` is mutable by design.** See "Handling external
 workflow-change requests" below.
 
+**This system is version-controlled.** The git repo lives on Rishwanth's laptop
+at `~/Documents/job-application-system/` and pushes to private GitHub. It is
+fed by exporting the `.skill` files from Claude Desktop — not by editing files
+directly, which does not reach the server. `CHANGELOG.md` is still written by
+hand for every accepted change; git versions it rather than replacing it. See
+`change_protocol` step 8.
+
 ## Workflow: tailoring a CV to a new JD
 
 1. **Read `references/facts.yaml` fully first.** It contains claim locks
@@ -161,9 +168,13 @@ fact about him):
 4. Log the accepted change in `references/CHANGELOG.md` using the template
    at the bottom of that file — source, corroboration, what was rejected and
    why, and the cost paid.
-5. Git isn't set up yet. Flag this to Rishwanth before implementing the
-   first such change, per his explicit instruction — CHANGELOG.md is interim
-   tracking only.
+5. **Commit the change.** Git is active; the repo is on Rishwanth's laptop at
+   `~/Documents/job-application-system/`. After the CHANGELOG entry is written,
+   run `~/Documents/job-application-system/sync-and-commit.sh` — it commits the
+   change with that entry as the message and pushes to private GitHub. If this
+   session cannot run shell commands on his laptop, say so explicitly and ask
+   him to run it. Never skip this silently: an uncommitted change leaves the
+   audit trail incomplete.
 
 ## Regenerating the bullet bank or facts index
 
