@@ -31,13 +31,16 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CHANGELOG="$REPO/cv-tailoring/references/CHANGELOG.md"
 SKILLS=(cv-tailoring cover-letter jd-recruiter-brief application-qa)
 
-DRY_RUN=0; USE_EXPORTS=0
-for arg in "$@"; do
-  case "$arg" in
+DRY_RUN=0; USE_EXPORTS=0; EXPLICIT_MSG=""
+while (( $# )); do
+  case "$1" in
     --dry-run) DRY_RUN=1 ;;
     --exports) USE_EXPORTS=1 ;;
-    *) echo "Unknown option: $arg" >&2; exit 2 ;;
+    -m) shift; EXPLICIT_MSG="${1:-}"
+        [[ -n "$EXPLICIT_MSG" ]] || { echo "-m needs a message" >&2; exit 2; } ;;
+    *) echo "Unknown option: $1" >&2; exit 2 ;;
   esac
+  shift
 done
 
 STAGING="$(mktemp -d)"
@@ -96,6 +99,10 @@ echo
 
 # --- build the commit message from the newest CHANGELOG entry -------------
 MSG_FILE="$STAGING/commit-msg.txt"
+
+if [[ -n "$EXPLICIT_MSG" ]]; then
+  printf '%s\n' "$EXPLICIT_MSG" > "$MSG_FILE"
+else
 python3 - "$CHANGELOG" > "$MSG_FILE" <<'PY'
 import re, sys, pathlib
 text = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
@@ -110,7 +117,29 @@ heading, body = entries[-1]
 print(heading[3:].strip()); print(); print(heading); print(body.strip())
 PY
 
-echo "Commit message (from newest CHANGELOG entry):"
+  # Guard: refuse to reuse a CHANGELOG entry that is already committed.
+  # Without this, a change made without a new entry silently inherits the
+  # previous entry's message and the log claims it did something it did not.
+  SUBJECT="$(head -1 "$MSG_FILE")"
+  # Write to a file rather than piping into grep: `grep -q` exits on first
+  # match, which SIGPIPEs `git log`, and under `set -o pipefail` that makes the
+  # pipeline report failure even on a match. The race is intermittent, so the
+  # guard would pass sometimes and not others.
+  git log --format=%s > "$STAGING/subjects.txt"
+  if grep -Fxq "$SUBJECT" "$STAGING/subjects.txt"; then
+    echo "ERROR: the newest CHANGELOG entry is already committed:" >&2
+    echo "         \"$SUBJECT\"" >&2
+    echo >&2
+    echo "Reusing it would make the log describe a change this commit did not make." >&2
+    echo "Either:" >&2
+    echo "  - write a new CHANGELOG entry (normal for an accepted workflow change), or" >&2
+    echo "  - for a correction that genuinely needs no entry, pass a message:" >&2
+    echo "      ./sync-and-commit.sh -m \"short description of the fix\"" >&2
+    exit 1
+  fi
+fi
+
+echo "Commit message:"
 echo "---------------------------------------------"
 head -1 "$MSG_FILE"
 echo "  ... $(wc -l < "$MSG_FILE" | tr -d ' ') lines total"

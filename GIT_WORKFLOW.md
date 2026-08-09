@@ -110,6 +110,25 @@ Not a summary of it. The script takes the newest dated `## YYYY-MM-DD` section
 verbatim, so the log and the changelog cannot drift apart. Write the entry
 properly and the commit message takes care of itself.
 
+### Changes that genuinely have no CHANGELOG entry
+
+Some commits are corrections rather than accepted workflow changes — a typo, a
+stale sentence, an infrastructure fix. Those get an explicit message:
+
+```bash
+./sync-and-commit.sh -m "Fix stale export reference in SKILL.md"
+```
+
+The script **refuses** to reuse a CHANGELOG entry that is already committed.
+Without that guard it would silently inherit the previous entry's message, and
+the log would claim the commit did something it did not.
+
+This happened once, before the guard existed: commit `053b2b9` changed one
+sentence in `cv-tailoring/SKILL.md` but carries the full "2026-08-09 — Git
+version control activated" entry as its message, duplicating `0795ff5`. It has
+not been rewritten — history that is already pushed stays put, and corrections
+get appended rather than hidden. Read those two commits together.
+
 ### One commit per accepted change. Never squash.
 
 One accepted change, one commit — even a one-line edit to a single rule. Don't
