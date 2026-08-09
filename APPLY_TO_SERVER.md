@@ -57,15 +57,15 @@ In the `change_protocol:` block, the `steps:` list currently ends with step 7
 ("7. Log the accepted change in CHANGELOG.md..."). Add this immediately after
 step 7 and before the `never:` key, matching the existing indentation exactly:
 
-    - "8. Commit the change. Git repo is at ~/Documents/job-application-system/
-        on Rishwanth's laptop. Because skills run from the server and cannot be
-        committed from inside this session, tell Rishwanth to export the four
-        .skill files from Claude Desktop into ~/Downloads and run
-        ~/Documents/job-application-system/sync-and-commit.sh — that makes ONE
-        commit using the new CHANGELOG entry as its message and pushes it.
-        One commit per accepted change: never batch two, never squash, the log
-        is the audit trail. Never skip this silently — an uncommitted change
-        leaves the audit trail incomplete. Details in GIT_WORKFLOW.md."
+    - "8. Commit the change. The git repo is on Rishwanth's laptop at
+        ~/Documents/job-application-system/ and pushes to private GitHub. Run
+        ~/Documents/job-application-system/sync-and-commit.sh — it reads the
+        skills, makes ONE commit using the new CHANGELOG entry as its message,
+        and pushes. If this session cannot run shell commands on his laptop,
+        say so explicitly and ask him to run it himself. One commit per
+        accepted change: never batch two, never squash — the log is the audit
+        trail. Never skip this silently: an uncommitted change leaves the
+        audit trail incomplete. Details in GIT_WORKFLOW.md."
 
 
 ======================================================================
@@ -81,12 +81,12 @@ FIND:
 
 REPLACE WITH:
 5. **Commit the change.** Git is active; the repo is on Rishwanth's laptop at
-   `~/Documents/job-application-system/`. This session cannot commit it —
-   skills run from the server, not from that repo. So after the CHANGELOG
-   entry is written, tell Rishwanth to export the four `.skill` files from
-   Claude Desktop into `~/Downloads` and run
-   `~/Documents/job-application-system/sync-and-commit.sh`. Never skip this
-   silently: an uncommitted change leaves the audit trail incomplete.
+   `~/Documents/job-application-system/`. After the CHANGELOG entry is written,
+   run `~/Documents/job-application-system/sync-and-commit.sh` — it commits the
+   change with that entry as the message and pushes to private GitHub. If this
+   session cannot run shell commands on his laptop, say so explicitly and ask
+   him to run it. Never skip this silently: an uncommitted change leaves the
+   audit trail incomplete.
 
 
 EDIT 4 — add a version-control note.
@@ -198,22 +198,24 @@ change.
 
 ## After it's done
 
-1. In Claude Desktop, export all four skills again (`⋯ → Download` on each):
-   `cv-tailoring`, `cover-letter`, `jd-recruiter-brief`, `application-qa`.
-   Leave the `.skill` files in `~/Downloads`.
+The chat may offer to run `sync-and-commit.sh` itself — let it try. That is the
+intended end state, and either result is useful information.
 
-2. Run:
+**Then check whether the local cache picked up the change:**
 
-   ```bash
-   ~/Documents/job-application-system/sync-and-commit.sh
-   ```
+```bash
+~/Documents/job-application-system/sync-and-commit.sh --dry-run
+```
 
-   It reads the exports, commits with the new CHANGELOG entry as the message,
-   and pushes to GitHub.
+- **It lists `SKILL.md`, `workflow-rules.yaml`, `CHANGELOG.md` as changed** →
+  the cache refreshed from the server. Drop `--dry-run` to commit and push. No
+  exporting needed, now or in future.
+- **It says "No changes"** → the cache has not refreshed yet. Wait a few
+  minutes, reopen Claude Desktop, and retry. If it stays empty, fall back to
+  exporting the four skills into `~/Downloads` and run with `--exports`.
 
-3. Verify it took, in a **new** Desktop chat:
+**Finally, verify in a new Desktop chat:**
 
-   > Quote step 8 of change_protocol from workflow-rules.yaml.
+> Quote step 8 of change_protocol from workflow-rules.yaml.
 
-   If it quotes step 8, everything is live and consistent across the server,
-   the repo, and GitHub.
+If it quotes step 8, the server, the repo and GitHub are all consistent.

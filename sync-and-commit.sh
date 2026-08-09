@@ -9,15 +9,19 @@
 # 2026-08-09). So the authoritative source for this repo is a fresh export of
 # the .skill files from Claude Desktop.
 #
-# SOURCES, in order of preference:
-#   1. ~/Downloads/*.skill        — exported from Claude Desktop (authoritative)
-#   2. the local cache folder     — fallback; only trustworthy if the cache has
-#                                   refreshed from the server since the change
+# SOURCES:
+#   default            the local cache folder. Preferred for day-to-day use: no
+#                      manual export step. Valid ONLY if the cache refreshes
+#                      from the server after a change — being verified as of
+#                      2026-08-09. Always check the diff before committing.
+#   --exports          ~/Downloads/*.skill, exported from Claude Desktop.
+#                      Guaranteed to match the server. Use if the cache turns
+#                      out not to refresh, or to double-check it.
 #
 # USAGE
-#   ./sync-and-commit.sh              use best available source, commit, push
+#   ./sync-and-commit.sh              read the cache, commit, push
 #   ./sync-and-commit.sh --dry-run    show what would change, commit nothing
-#   ./sync-and-commit.sh --cache      force the local cache as source
+#   ./sync-and-commit.sh --exports    read ~/Downloads/*.skill instead
 #
 set -euo pipefail
 
@@ -27,11 +31,11 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CHANGELOG="$REPO/cv-tailoring/references/CHANGELOG.md"
 SKILLS=(cv-tailoring cover-letter jd-recruiter-brief application-qa)
 
-DRY_RUN=0; FORCE_CACHE=0
+DRY_RUN=0; USE_EXPORTS=0
 for arg in "$@"; do
   case "$arg" in
     --dry-run) DRY_RUN=1 ;;
-    --cache)   FORCE_CACHE=1 ;;
+    --exports) USE_EXPORTS=1 ;;
     *) echo "Unknown option: $arg" >&2; exit 2 ;;
   esac
 done
@@ -40,13 +44,17 @@ STAGING="$(mktemp -d)"
 trap 'rm -rf "$STAGING"' EXIT
 
 # --- pick a source --------------------------------------------------------
-EXPORTS_FOUND=0
-for s in "${SKILLS[@]}"; do
-  [[ -f "$DOWNLOADS/$s.skill" ]] && EXPORTS_FOUND=$((EXPORTS_FOUND + 1))
-done
-
-if [[ $FORCE_CACHE -eq 0 && $EXPORTS_FOUND -eq ${#SKILLS[@]} ]]; then
-  SOURCE_DESC="Claude Desktop exports in ~/Downloads (authoritative)"
+if [[ $USE_EXPORTS -eq 1 ]]; then
+  missing=()
+  for s in "${SKILLS[@]}"; do
+    [[ -f "$DOWNLOADS/$s.skill" ]] || missing+=("$s.skill")
+  done
+  if (( ${#missing[@]} )); then
+    echo "ERROR: missing from ~/Downloads: ${missing[*]}" >&2
+    echo "Export all four skills from Claude Desktop, or drop --exports." >&2
+    exit 1
+  fi
+  SOURCE_DESC="Claude Desktop exports in ~/Downloads (matches the server)"
   for s in "${SKILLS[@]}"; do
     tmp="$STAGING/.unzip-$s"; mkdir -p "$tmp"
     unzip -qo "$DOWNLOADS/$s.skill" -d "$tmp"
@@ -56,12 +64,7 @@ if [[ $FORCE_CACHE -eq 0 && $EXPORTS_FOUND -eq ${#SKILLS[@]} ]]; then
     rm -rf "$tmp"
   done
 else
-  if [[ $FORCE_CACHE -eq 0 && $EXPORTS_FOUND -gt 0 ]]; then
-    echo "WARNING: found only $EXPORTS_FOUND of ${#SKILLS[@]} .skill exports in ~/Downloads." >&2
-    echo "Export all four from Claude Desktop, or re-run with --cache." >&2
-    exit 1
-  fi
-  SOURCE_DESC="local cache folder (NOT authoritative — may lag the server)"
+  SOURCE_DESC="local cache folder (verify the diff — the cache can lag the server)"
   [[ -d "$CACHE" ]] || { echo "ERROR: cache folder not found at $CACHE" >&2; exit 1; }
   for s in "${SKILLS[@]}"; do
     [[ -d "$CACHE/$s" ]] || { echo "WARNING: '$s' missing from cache, skipping." >&2; continue; }
