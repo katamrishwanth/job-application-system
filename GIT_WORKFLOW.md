@@ -13,25 +13,23 @@ claim said on the day it went onto a submitted CV.
 
 ## The one command
 
-After Rishwanth approves a change and the `CHANGELOG.md` entry is written, the
-change lives on Claude's server. To get it into git:
-
-1. In Claude Desktop, export all four skills (`⋯ → Download`) into `~/Downloads`.
-2. Run:
+After Rishwanth approves a change and the `CHANGELOG.md` entry is written, run:
 
 ```bash
 ~/Documents/job-application-system/sync-and-commit.sh
 ```
 
-It reads the `.skill` exports, makes one commit using the newest CHANGELOG entry
-as the message, and pushes to private GitHub. It refuses to run when nothing
+It reads the local cache, makes one commit using the newest CHANGELOG entry as
+the message, and pushes to private GitHub. It refuses to run when nothing
 changed, so running it twice is harmless. `--dry-run` shows what would happen
 without committing.
 
 This is step 8 of `change_protocol` in `workflow-rules.yaml`.
 
-**Why the export step exists:** skills run from the server, and the local folder
-is a download-only cache. See "Settled" below.
+**The Desktop chat cannot run this** — its sandbox has no access to the laptop
+filesystem. Confirmed 2026-08-09: the session said so plainly rather than
+skipping the step, which is exactly what step 8 asks it to do. Rishwanth runs
+the script himself, or points a Claude Code session at the folder.
 
 ---
 
@@ -75,13 +73,17 @@ How it was established:
 1. **Skill files can only be changed from inside a Claude Desktop chat.** To
    apply an edit, paste the prompt in `APPLY_TO_SERVER.md` into a Desktop chat.
    Editing the cache folder achieves nothing.
-2. **The authoritative source for this repo is a fresh `.skill` export**, not
-   the cache. Export all four from Claude Desktop into `~/Downloads`, then run
-   `sync-and-commit.sh` — it prefers the exports automatically and says which
-   source it used.
-3. **The cache is a fallback only** (`--cache`), trustworthy solely if it has
-   refreshed from the server since the change. It is not known whether or when
-   it does refresh, so prefer exports.
+2. **But the cache DOES refresh after a server-side change** — verified
+   2026-08-09. A Desktop chat edited `SKILL.md`, `workflow-rules.yaml` and
+   `CHANGELOG.md`; all three checksums in the cache then changed to match, and
+   step 8 appeared. So the cache is a valid source *after* a change is made
+   properly, and `sync-and-commit.sh` reads it by default. No export step.
+3. **Exports remain the fallback** (`--exports`) if the cache ever lags. Check
+   with `--dry-run` before committing: if it reports no changes when you know
+   a change was made, the cache hasn't caught up yet.
+
+The direction of travel is one-way: **server → cache**. Nothing you do in the
+cache travels back up.
 
 ---
 
