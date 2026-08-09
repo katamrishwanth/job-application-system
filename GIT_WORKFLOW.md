@@ -13,18 +13,25 @@ claim said on the day it went onto a submitted CV.
 
 ## The one command
 
-After Rishwanth approves a change and the `CHANGELOG.md` entry is written:
+After Rishwanth approves a change and the `CHANGELOG.md` entry is written, the
+change lives on Claude's server. To get it into git:
+
+1. In Claude Desktop, export all four skills (`⋯ → Download`) into `~/Downloads`.
+2. Run:
 
 ```bash
 ~/Documents/job-application-system/sync-and-commit.sh
 ```
 
-That copies the skills out of the Claude app folder, makes one commit using the
-newest CHANGELOG entry as the message, and pushes to private GitHub. It refuses
-to run when nothing changed, so running it twice is harmless. `--dry-run` shows
-what would happen without committing.
+It reads the `.skill` exports, makes one commit using the newest CHANGELOG entry
+as the message, and pushes to private GitHub. It refuses to run when nothing
+changed, so running it twice is harmless. `--dry-run` shows what would happen
+without committing.
 
 This is step 8 of `change_protocol` in `workflow-rules.yaml`.
+
+**Why the export step exists:** skills run from the server, and the local folder
+is a download-only cache. See "Settled" below.
 
 ---
 
@@ -49,20 +56,32 @@ being deleted.
 If the app ever does move the folder, the script fails loudly with instructions
 rather than committing a half-empty repo.
 
-### Open question: does editing files locally reach the Claude server?
+### Settled: editing files locally does NOT reach the Claude server
 
-Unresolved, and it matters. `manifest.json` gives each skill a server-side
-`skillId` and `updatedAt`, and editing files locally did **not** bump
-`updatedAt` — suggesting sync may run server→local only. If so, a future sync
-could revert local edits, including step 8 itself.
+Tested and confirmed on 2026-08-09. The skills execute from Claude's **server**
+copy. That `~/Library/…/skills/` folder is a **download-only cache**: edits made
+there are invisible to the running skill.
 
-**To test:** open a new Claude session, invoke `cv-tailoring`, and ask it to
-quote step 8 of `change_protocol`. If it stops at step 7, the server copy won
-and the skill needs updating through Claude's own Skills interface rather than
-by editing files.
+How it was established:
+- `manifest.json` kept reporting `updatedAt: 2026-08-06` for all four skills
+  after local edits — the server never registered them.
+- All four skills were exported from Claude Desktop as `.skill` archives and
+  diffed against the local cache. The server copies contained none of the edits.
+- Functionally confirmed: a fresh Desktop session, asked to quote step 8 of
+  `change_protocol`, reported the steps list ending at 7.
 
-Either way git makes a reversion *visible* — the next `sync-and-commit.sh` would
-show those files changing back — instead of silent.
+**Consequences for this repo:**
+
+1. **Skill files can only be changed from inside a Claude Desktop chat.** To
+   apply an edit, paste the prompt in `APPLY_TO_SERVER.md` into a Desktop chat.
+   Editing the cache folder achieves nothing.
+2. **The authoritative source for this repo is a fresh `.skill` export**, not
+   the cache. Export all four from Claude Desktop into `~/Downloads`, then run
+   `sync-and-commit.sh` — it prefers the exports automatically and says which
+   source it used.
+3. **The cache is a fallback only** (`--cache`), trustworthy solely if it has
+   refreshed from the server since the change. It is not known whether or when
+   it does refresh, so prefer exports.
 
 ---
 
