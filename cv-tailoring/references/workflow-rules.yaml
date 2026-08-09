@@ -172,15 +172,6 @@ change_protocol:
         on his explicit approval."
     - "7. Log the accepted change in CHANGELOG.md with source, corroboration,
         rejected sub-claims and why, and cost paid."
-    - "8. Commit it: run ~/Documents/job-application-system/sync-and-commit.sh
-        That copies these skills into the git repo, makes ONE commit using the
-        new CHANGELOG entry as its message, and pushes to the private GitHub
-        repo. One commit per accepted change — never batch two, never squash;
-        the log is the audit trail. Do NOT git init inside this skills folder:
-        the Claude app's sync deletes .git (verified 2026-08-08), which is why
-        the repo lives in Documents. If this session cannot run the script,
-        say so plainly rather than skipping it — an uncommitted change leaves
-        the audit trail incomplete. Details in that repo's GIT_WORKFLOW.md."
   never:
     - "Never let a single-source claim silently become a Tier 1 locked rule."
     - "Never apply a change to facts.yaml or evidence/*.md from this protocol
