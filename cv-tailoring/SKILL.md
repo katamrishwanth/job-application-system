@@ -51,9 +51,11 @@ generated draft alter them.
 workflow-change requests" below.
 
 **This system is version-controlled.** The git repo lives on Rishwanth's laptop
-at `~/Documents/job-application-system/` and pushes to private GitHub. It is
-fed by exporting the `.skill` files from Claude Desktop — not by editing files
-directly, which does not reach the server. `CHANGELOG.md` is still written by
+at `~/Documents/job-application-system/` and pushes to private GitHub. The
+repo is fed from Claude's local skills cache on the laptop, which refreshes
+automatically after a change is made here (verified 2026-08-09). Editing that
+cache directly does not reach the server, so all skill changes must be made
+from a Claude Desktop chat like this one. `CHANGELOG.md` is still written by
 hand for every accepted change; git versions it rather than replacing it. See
 `change_protocol` step 8.
 
