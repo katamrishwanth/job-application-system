@@ -211,5 +211,144 @@
     "source": "projects.md#3",
     "verified": true,
     "notes": null
+  },
+  {
+    "id": "ENM-F01",
+    "role": "energymap",
+    "fact": "Built EnergyMap, a live source-backed energy and clean-tech market map, self-directed with Claude Code",
+    "tags": [
+      "product",
+      "data_infrastructure",
+      "initiative",
+      "ai_ml",
+      "sustainability"
+    ],
+    "has_bullet": "ENM-01",
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "ENM-F02",
+    "role": "energymap",
+    "fact": "Built 4 data explorers: battery fleet, renewable buildout, India power market and prices, power prices with negative hours",
+    "tags": [
+      "analytics",
+      "data_infrastructure",
+      "energy",
+      "sustainability"
+    ],
+    "has_bullet": "ENM-01",
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": "check",
+    "notes": "Snapshot of the live site on 2026-11-04; re-check the count before each new CV."
+  },
+  {
+    "id": "ENM-F03",
+    "role": "energymap",
+    "fact": "Explorers pull official data from MaStR and SMARD (Bundesnetzagentur) on weekly and daily refresh, plus CERC India market reports",
+    "tags": [
+      "data_infrastructure",
+      "energy",
+      "germany",
+      "multi_market",
+      "automation"
+    ],
+    "has_bullet": "ENM-01",
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "ENM-F04",
+    "role": "energymap",
+    "fact": "Published 2 insight studies: a virtual power plant market study and the long-haul trucking thesis",
+    "tags": [
+      "market_research",
+      "communication",
+      "strategy",
+      "energy"
+    ],
+    "has_bullet": "ENM-01",
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": "check",
+    "notes": "Snapshot of the live site on 2026-11-04; re-check the count before each new CV. VPP study came from the Flexa case challenge: never call it client work."
+  },
+  {
+    "id": "ENM-F05",
+    "role": "energymap",
+    "fact": "Built an interactive VPP funnel chart sizing German home batteries reachable via manufacturer clouds, 2026 to 2030",
+    "tags": [
+      "market_sizing",
+      "analytics",
+      "energy",
+      "commercial"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": "Some reach and size shares are stated assumptions on the site."
+  },
+  {
+    "id": "ENM-F06",
+    "role": "energymap",
+    "fact": "Market funnel builder tool based on the Cloudline study is in development, not yet live",
+    "tags": [
+      "product",
+      "market_sizing"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": "Do not put on a CV until it is live."
+  },
+  {
+    "id": "ENM-F07",
+    "role": "energymap",
+    "fact": "Mapped 159 energy and clean-tech topics across 3 layers and 9 domains, including Carbon Capture & Removal",
+    "tags": [
+      "market_research",
+      "energy",
+      "strategy"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": "check",
+    "notes": "Snapshot of the live site on 2026-11-04; re-check the count before each new CV. Rishwanth prefers the CV line to lead with explorers, tools and insights, not this."
+  },
+  {
+    "id": "ENM-F08",
+    "role": "energymap",
+    "fact": "Every figure on the site links to its source and a last-checked date",
+    "tags": [
+      "rigour",
+      "data_quality"
+    ],
+    "has_bullet": null,
+    "cv_suitable": false,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": "Interview talking point."
+  },
+  {
+    "id": "ENM-F09",
+    "role": "energymap",
+    "fact": "Scope set as Germany first, then Europe, India and Asia",
+    "tags": [
+      "multi_market",
+      "strategy"
+    ],
+    "has_bullet": null,
+    "cv_suitable": true,
+    "source": "projects.md#6",
+    "verified": true,
+    "notes": null
   }
 ]

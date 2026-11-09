@@ -4,13 +4,14 @@
     "generated": "2026-08-05",
     "source_of_truth": "facts.yaml",
     "counts": {
-      "total": 53,
-      "in_range": 19,
-      "needs_trim": 32,
+      "total": 55,
+      "in_range": 22,
+      "needs_trim": 31,
       "needs_pad": 2,
       "unverified": 2
     },
-    "usage": "Select by role + theme overlap with JD, then trim/pad to target_range. Never invent; if no bullet fits, say so."
+    "usage": "Select by role + theme overlap with JD, then trim/pad to target_range. Never invent; if no bullet fits, say so.",
+    "updated": "2026-11-05"
   },
   "theme_taxonomy": [
     "analytics",
@@ -409,7 +410,7 @@
     {
       "id": "LIB-03",
       "role": "libergy",
-      "text": "Automated tender monitoring across 16 German platforms via Power Automate; defined CPV-code filters to screen relevant public sector bids.",
+      "text": "Automated tender monitoring across 16 EU platforms via Google Apps Script and documented the process guide.",
       "type": "work",
       "themes": [
         "automation",
@@ -418,14 +419,14 @@
       "metric": "16 platforms",
       "source": "CV-A",
       "verified": true,
-      "notes": null,
-      "chars": 138,
+      "notes": "Corrected 2026-11-05 by Rishwanth: Google Apps Script, EU platforms (was 'German platforms via Power Automate'). Wording from the 2026 Sereact/Linde CVs.",
+      "chars": 107,
       "target_range": [
         100,
         115
       ],
-      "in_range": false,
-      "over_by": 23,
+      "in_range": true,
+      "over_by": 0,
       "under_by": 0,
       "has_em_dash": false
     },
@@ -1270,6 +1271,58 @@
         120,
         130
       ],
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "ENM-01",
+      "role": "energymap",
+      "text": "Built 4 data explorers on MaStR, SMARD and CERC data, from battery fleets to negative prices; published 2 market insight studies.",
+      "type": "project",
+      "themes": [
+        "data_infrastructure",
+        "analytics",
+        "sustainability",
+        "ai_ml"
+      ],
+      "metric": null,
+      "source": "Linde CV 2026-11-04",
+      "verified": true,
+      "notes": "Preferred (Rishwanth, 2026-11-04): leads with explorers and insights. Counts are a site snapshot; re-check per CV. Used on the Linde CV.",
+      "target_range": [
+        120,
+        130
+      ],
+      "evidence_ref": "projects.md#6",
+      "chars": 129,
+      "in_range": true,
+      "over_by": 0,
+      "under_by": 0,
+      "has_em_dash": false
+    },
+    {
+      "id": "ENM-02",
+      "role": "energymap",
+      "text": "Built live explorers on MaStR and SMARD data for battery fleets and negative power prices; published source-backed market studies.",
+      "type": "project",
+      "themes": [
+        "data_infrastructure",
+        "analytics",
+        "sustainability",
+        "ai_ml"
+      ],
+      "metric": null,
+      "source": "Linde CV 2026-11-04",
+      "verified": true,
+      "notes": "Alternative without counts; safer if the site's numbers have moved.",
+      "target_range": [
+        120,
+        130
+      ],
+      "evidence_ref": "projects.md#6",
+      "chars": 130,
       "in_range": true,
       "over_by": 0,
       "under_by": 0,

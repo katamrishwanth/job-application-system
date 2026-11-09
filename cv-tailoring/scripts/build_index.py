@@ -96,7 +96,8 @@ f("LIB-F11","libergy","Automated invoicing and sustainability certificate provis
   ["automation","product"],"LIB-02",True,"libergy.md#digital-platform")
 f("LIB-F12","libergy","Benchmarked CO2 reporting tools of 10 companies to inform product design",
   ["market_research","product","sustainability"],"LIB-04",True,"libergy.md#digital-platform")
-f("LIB-F13","libergy","Automated tender monitoring across 16 German platforms using Power Automate and CPV code filters",
+# Corrected 2026-11-05 (Rishwanth): Google Apps Script, EU platforms.
+f("LIB-F13","libergy","Automated tender monitoring across 16 EU platforms using Google Apps Script and CPV code filters",
   ["automation","commercial","public_sector"],"LIB-03",True,"libergy.md#tender-monitoring-automation")
 f("LIB-F14","libergy","Documented handling logic per inbound channel and wrote a process guide for tender monitoring",
   ["documentation","process_improvement","automation"],None,True,"libergy.md#tender-monitoring-automation")
@@ -223,6 +224,27 @@ f("MDY-F01","moodys","Won the Moody's Credit Rating Challenge 2023 among top Fre
 f("MDY-F02","moodys","Forecasted firm financials assessing profitability, credit performance and liquidity risk",
   ["finance","analytics","forecasting"],"MDY-01",True,"projects.md#3")
 
+# Added 2026-11-05: EnergyMap (evidence/projects.md section 6). The live JSON
+# carries per-fact notes; see index/projects.facts.json for the full records.
+f("ENM-F01","energymap","Built EnergyMap, a live source-backed energy and clean-tech market map, self-directed with Claude Code",
+  ["product","data_infrastructure","initiative","ai_ml","sustainability"],"ENM-01",True,"projects.md#6")
+f("ENM-F02","energymap","Built 4 data explorers: battery fleet, renewable buildout, India power market and prices, power prices with negative hours",
+  ["analytics","data_infrastructure","energy","sustainability"],"ENM-01",True,"projects.md#6",verified="check")
+f("ENM-F03","energymap","Explorers pull official data from MaStR and SMARD (Bundesnetzagentur) on weekly and daily refresh, plus CERC India market reports",
+  ["data_infrastructure","energy","germany","multi_market","automation"],"ENM-01",True,"projects.md#6")
+f("ENM-F04","energymap","Published 2 insight studies: a virtual power plant market study and the long-haul trucking thesis",
+  ["market_research","communication","strategy","energy"],"ENM-01",True,"projects.md#6",verified="check")
+f("ENM-F05","energymap","Built an interactive VPP funnel chart sizing German home batteries reachable via manufacturer clouds, 2026 to 2030",
+  ["market_sizing","analytics","energy","commercial"],None,True,"projects.md#6")
+f("ENM-F06","energymap","Market funnel builder tool based on the Cloudline study is in development, not yet live",
+  ["product","market_sizing"],None,False,"projects.md#6")
+f("ENM-F07","energymap","Mapped 159 energy and clean-tech topics across 3 layers and 9 domains, including Carbon Capture & Removal",
+  ["market_research","energy","strategy"],None,True,"projects.md#6",verified="check")
+f("ENM-F08","energymap","Every figure on the site links to its source and a last-checked date",
+  ["rigour","data_quality"],None,False,"projects.md#6")
+f("ENM-F09","energymap","Scope set as Germany first, then Europe, India and Asia",
+  ["multi_market","strategy"],None,True,"projects.md#6")
+
 # ================================================================ emit
 os.makedirs("/home/claude/index", exist_ok=True)
 roles = {}
@@ -231,7 +253,7 @@ for x in F:
 
 filemap = {"pg":"pg","libergy":"libergy","consulting_180dc":"180dc","thesis":"thesis",
            "prajjawala":"prajjawala","n8n_automation":"projects","muma":"projects",
-           "moodys":"projects"}
+           "moodys":"projects","energymap":"projects"}
 grouped = {}
 for r, items in roles.items():
     grouped.setdefault(filemap[r], []).extend(items)

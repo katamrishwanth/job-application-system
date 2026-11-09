@@ -1,6 +1,6 @@
 # =============================================================
 # facts.yaml — Rishwanth Katam, single source of truth
-# Last resolved: 2026-08-05
+# Last resolved: 2026-08-05 (Libergy tender tool + EnergyMap added 2026-11-05)
 # Every value here was explicitly confirmed. If a CV, draft, or
 # past chat says something different, THIS FILE WINS.
 # =============================================================
@@ -78,6 +78,11 @@ work_experience:
       infrastructure-guesstimate methodology sheet; Libergy's model spans
       all 7 verticals with infrastructure handled as embedded assumption
       variables rather than a separate methodology.
+    tender_monitoring: "16 EU tender platforms, automated with Google Apps Script, CPV-code filters, process guide written"
+    tender_monitoring_note: >
+      CORRECTED 2026-11-05 by Rishwanth directly. Tool is Google Apps Script,
+      platforms are EU tender platforms. Older index/bullet-bank text said
+      "16 German platforms via Power Automate" -- that was wrong.
     lean_canvas_workshop_role: "participated"
     lean_canvas_note: >
       LOCKED as "participated", not "led". Rishwanth confirmed CVs have
@@ -157,6 +162,19 @@ side_projects:
     context: "ESCP academic project, team of 4"
     stack: "A* pathfinding + GNN crowd-density prediction"
     status: "use on CVs, second-strongest AI proof point"
+  energymap:
+    name: "EnergyMap"
+    url: "https://energymap-olive.vercel.app/"
+    context: "Self-directed, ongoing side project, out of enthusiasm for the green energy transition"
+    stack: "Built with Claude Code; hosted on Vercel"
+    status: "use on CVs for energy, data and analytics roles; full detail in evidence/projects.md section 6"
+    cv_focus: >
+      Rishwanth's explicit preference (2026-11-04): lead with the data
+      explorers, tools and insights, not the topic/content map.
+    claim_note: >
+      Counts (explorers, studies, topics) are a snapshot of a live site that
+      keeps changing -- re-check before each new CV. The market funnel
+      builder is in development; never call it built until it is live.
   hermes_agent:
     name: "Hermes agent for automated job applications"
     status: "NEVER put on CVs or application materials"
@@ -191,6 +209,15 @@ skills_bank:
     status: demonstrated
   - name: "Power Automate"
     status: demonstrated
+    note: >
+      Confirmed by Rishwanth 2026-11-05 as a skill he has, so it stays on
+      CVs. There is no work evidence on file for it (the Libergy tender
+      automation, once cited for it, was Google Apps Script). Use it in a
+      skills line only, never as the tool behind a specific bullet, and
+      expect an interviewer to ask for an example.
+  - name: "Google Apps Script"
+    status: demonstrated
+    note: "Libergy tender monitoring across 16 EU platforms (2024)"
   - name: "Looker Studio"
     status: demonstrated
   - name: "NielsenIQ (Nielsen Discover)"
@@ -219,6 +246,7 @@ skills_bank:
     note: "basics, used briefly at P&G"
   - name: "AI tools (Claude, Claude Code, ChatGPT)"
     status: demonstrated
+    note: "Claude Code: EnergyMap (live). Never cite the job-application skills (Hermes rule)."
 
 # =============================================================
 # Master CV routing

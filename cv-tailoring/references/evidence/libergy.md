@@ -89,12 +89,16 @@ Maintain that distinction consistently.
 - Used to align Libergy's product methodology with international norms
 
 ## Tender monitoring automation
-- Identified all relevant tender platforms in Germany, prioritised and shortlisted
+- Identified all relevant EU tender platforms, prioritised and shortlisted
 - Identified inbound options per platform (RSS feeds, email alerts, manual check)
 - Defined **CPV (Common Procurement Vocabulary) codes** and filters for relevant
   notifications
 - Documented handling logic per inbound channel and wrote a process guide
-- **Automated monitoring across 16 platforms using Power Automate**
+- **Automated monitoring across 16 EU platforms using Google Apps Script**
+- CORRECTED 2026-11-05 by Rishwanth directly: the tool was **Google Apps
+  Script** (not Power Automate) and the platforms were **EU** tender platforms
+  (not German-only). Earlier versions of this file, the facts index and the
+  bullet bank said "16 German platforms via Power Automate" -- that was wrong.
 - Reviewed historical tenders to prepare for upcoming opportunities
 - Result: fully automated system to be notified of relevant public tenders,
   process them, and flag those needing review
@@ -135,7 +139,7 @@ Maintain that distinction consistently.
 GLEC 3.0. This regulatory list is unusually specific for a graduate CV and is
 the single most differentiating asset for ESG and compliance roles.
 
-**Tools:** Bubble (no-code), Power Automate.
+**Tools:** Bubble (no-code), Google Apps Script.
 
 **Company itself:** small Berlin startup, low name recognition. Always pair with
 the descriptor "green energy solutions startup" so the reader has context.

@@ -36,8 +36,8 @@ historical trivia.
 references/facts.yaml            canonical facts, claim locks, skills bank
 references/workflow-rules.yaml   mutable process/formatting rules (2 tiers)
 references/evidence/*.md         7 files, full ground truth per role/project
-references/index/*.facts.json    7 files, 88 atomic facts (searchable)
-references/bullet-bank.json      53 cached, pre-validated bullet renderings
+references/index/*.facts.json    7 files, 111 atomic facts (searchable)
+references/bullet-bank.json      55 cached, pre-validated bullet renderings
 references/CHANGELOG.md          version history of workflow changes
 assets/Master_CV_[A/B/C]_*.docx  the three master CV documents
 scripts/validate.py              length/style/claim-lock/provenance gate
@@ -120,10 +120,19 @@ from it. Don't route this through bullet generation.
   Never name Vinted or any company outside the 5 in `evidence/quantis.md`.
 - Libergy lean canvas: **"participated"**, never "led", unless Rishwanth
   explicitly overrides for a specific application.
+- Libergy tender monitoring: **16 EU platforms, Google Apps Script**
+  (corrected by Rishwanth 2026-11-05; never "German platforms" or
+  "Power Automate").
 - Prajjawala patent 554/KOL/2011: **never claim**, predates his involvement.
   180DC client: **never name** (it was ESCP itself).
 - P&G YouTube A/B test: **nationwide**, never "discounter-targeted".
 - Hermes job-application agent: **never on any CV**, interview material only.
+- EnergyMap (`evidence/projects.md` section 6): lead with **explorers, tools
+  and insights**, not the topic map. Counts are a live-site snapshot, so
+  re-check per CV. The market funnel builder is **in development**, never
+  "built". The site's thesis figures (78%, 31%) differ from the locked thesis
+  figures (70-90% feedstock-dependent, ~32%): use the locked ones, and remind
+  Rishwanth of the mismatch whenever the EnergyMap link is on a CV.
 
 ## Skills bank status tiers
 

@@ -37,6 +37,9 @@ Both recovered letters follow the same shape:
    (n8n, Libergy, 180DC, Quantis) as a "consulting foundation" cluster
    rather than a third full story. Match the density to how much room is
    left after move 2, don't force a second full narrative if it doesn't fit.
+   EnergyMap (added 2026-11-05, `evidence/projects.md` section 6) can join
+   that cluster for energy, data or analytics roles, framed by its data
+   explorers on official sources (MaStR, SMARD) and its published studies.
 4. **Why this company.** Two concrete, specific reasons, each tied to a
    real fact from that session's company research — never generic culture
    language. Detecon: Deutsche Telekom/T-Systems backing = real enterprise
@@ -63,6 +66,10 @@ because the sustainability framing would have pulled the letter away from
 the actual practice area. **Don't default to one fixed opening anchor
 — choose it based on what the role is actually about, and say so if you're
 deviating from what a template might suggest.**
+
+For energy-market, data or analytics roles, EnergyMap is a candidate
+build-and-advise anchor alongside n8n: a live tool built on official energy
+data, which shows both the domain interest and the ability to ship.
 
 ## Length
 

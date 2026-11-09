@@ -181,7 +181,7 @@
   {
     "id": "LIB-F13",
     "role": "libergy",
-    "fact": "Automated tender monitoring across 16 German platforms using Power Automate and CPV code filters",
+    "fact": "Automated tender monitoring across 16 EU platforms using Google Apps Script and CPV code filters",
     "tags": [
       "automation",
       "commercial",
@@ -191,7 +191,7 @@
     "cv_suitable": true,
     "source": "libergy.md#tender-monitoring-automation",
     "verified": true,
-    "notes": null
+    "notes": "Corrected 2026-11-05 by Rishwanth: Google Apps Script and EU platforms (was wrongly 'German platforms via Power Automate')."
   },
   {
     "id": "LIB-F14",

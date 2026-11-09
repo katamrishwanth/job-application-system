@@ -88,7 +88,8 @@ add("LIB-02", "libergy",
     "work", ["product", "sustainability", "automation"], None, "CV-A",
     notes="B2B platform, not consumer-facing. Keep that distinction.")
 add("LIB-03", "libergy",
-    "Automated tender monitoring across 16 German platforms via Power Automate; defined CPV-code filters to screen relevant public sector bids.",
+    # Corrected 2026-11-05 (Rishwanth): Google Apps Script, EU platforms.
+    "Automated tender monitoring across 16 EU platforms via Google Apps Script and documented the process guide.",
     "work", ["automation", "commercial"], "16 platforms", "CV-A")
 add("LIB-04", "libergy",
     "Conducted whitespace analysis and benchmarked 10 CO2-reporting tools across 6 verticals to shape go-to-market priorities.",
@@ -223,6 +224,16 @@ add("MDY-01", "moodys",
     "Forecasted firm financials to assess profitability, credit performance and liquidity risk; won against top French schools",
     "project", ["analytics", "commercial"], None, "sample-A",
     notes="If promoted to Projects, REMOVE from Achievements to avoid duplication.")
+
+# Added 2026-11-05: EnergyMap (evidence/projects.md section 6)
+add("ENM-01", "energymap",
+    "Built 4 data explorers on MaStR, SMARD and CERC data, from battery fleets to negative prices; published 2 market insight studies.",
+    "project", ["data_infrastructure", "analytics", "sustainability", "ai_ml"], None, "Linde CV 2026-11-04",
+    notes="Preferred. Counts are a site snapshot; re-check per CV.")
+add("ENM-02", "energymap",
+    "Built live explorers on MaStR and SMARD data for battery fleets and negative power prices; published source-backed market studies.",
+    "project", ["data_infrastructure", "analytics", "sustainability", "ai_ml"], None, "Linde CV 2026-11-04",
+    notes="Alternative without counts.")
 
 # ================================================================ emit
 EM_DASH = "\u2014"

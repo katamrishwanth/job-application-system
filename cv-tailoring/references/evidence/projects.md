@@ -1,7 +1,7 @@
 # EVIDENCE: Side Projects & Competitions
 
 > Layer: evidence. Not CV copy.
-> Linked bullets: N8N-01..03, MUM-01..03, MDY-01
+> Linked bullets: N8N-01..03, MUM-01..03, MDY-01, ENM-01..02
 
 ---
 
@@ -162,9 +162,90 @@ rules and a prompt library, then built AI agent skills to run it end to end.
 
 ---
 
+# 6. EnergyMap (energy & clean-tech market map)
+
+**Added 2026-11-05.** Sources: Rishwanth's own statements, plus the live site
+read on 2026-11-04. Counts below are a snapshot of a site that keeps
+changing: re-read the site or confirm with Rishwanth before each new CV.
+
+| Field | Value |
+|---|---|
+| Name | EnergyMap |
+| URL | https://energymap-olive.vercel.app/ |
+| Context | Self-directed, ongoing side project, built out of enthusiasm for the green energy transition |
+| Built with | Claude Code (stated by Rishwanth); hosted on Vercel |
+| Status | Live and ongoing |
+| Dates | No start date recorded. Ask before putting a date on a CV |
+| Scope | Germany first, then Europe, India and Asia (4 focus regions) |
+
+## What it is
+A connected, source-backed map of energy and clean-tech markets: how each part
+works, what official data shows, and which rules shape it. Every figure links
+to its source and a last-checked date.
+
+## Data explorers (CV focus)
+4 explorers as of 2026-11-04, 2 of them marked "Live":
+- Battery fleet
+- Renewable buildout
+- India power market and prices
+- Power prices with negative hours
+
+## Data sources
+- **Marktstammdatenregister (MaStR)**, Bundesnetzagentur, refreshed weekly
+- **SMARD**, Bundesnetzagentur, refreshed daily
+- **CERC** Market Monitoring Cell monthly reports (India: NLDC, IEX, PXIL, HPX)
+- BSW-Solar and Bundesnetzagentur data in the Cloudline model
+
+## Tools
+- Interactive **virtual power plant (VPP) funnel chart** with data table:
+  German home batteries reachable via manufacturer clouds, 2026 to 2030
+  (2.83m home batteries in 2026 rising to 4.88m in 2030; serviceable market
+  292k to 1.33m homes; some reach and size shares are stated assumptions)
+- **Market funnel builder** based on the Cloudline study: **IN DEVELOPMENT.**
+  Never describe it as built until it is live.
+- Public roadmap of planned explorers and tools
+
+## Insights (published studies)
+2 as of 2026-11-04:
+- A virtual power plant market study (Aug 2026), from the Flexa / Cloudline
+  case challenge. Realistic 2030 reach of 213k homes, EUR 61 per home per year
+- The master's thesis on long-haul trucking (Sep 2024), see `thesis.md`
+
+## Content map (secondary, NOT the CV focus)
+3 layers (physical, commercial, rules), 9 domains, 159 topics. Domains:
+Generation, Transmission & Distribution, Storage & Flexibility, Consumption,
+Carbon Capture & Removal, Markets & Prices, Business Models & Finance,
+Policy & Regulation, Carbon & Certificates.
+
+## interview_only
+- Non-coder shipping a live, source-backed data product with Claude Code
+- Chose official sources (Bundesnetzagentur, CERC) over third-party
+  aggregates; every number carries its source and a last-checked date
+- Same pattern as n8n and Prajjawala: spot a gap, build the system
+- The Carbon Capture & Removal domain is a hook for industrial-gas and CCUS
+  employers (e.g. Linde)
+
+## Claim guardrails
+- Rishwanth's explicit preference (2026-11-04): the CV line leads with
+  **explorers, tools and insights**, not the topic/content map.
+- Counts (4 explorers, 2 studies, 159 topics) are snapshots: verify per CV.
+- The market funnel builder is in development: never "built".
+- The VPP study came from an interview case challenge: describe it as a
+  market study, never as paid or client work.
+- **Thesis-number mismatch:** the site's thesis insight says HVO cuts
+  emissions "by 78%" at about EUR 38 per tonne avoided and BEV costs "31%
+  more" for the same freight. The locked thesis evidence is 70-90%
+  feedstock-dependent and ~32% (payload normalisation). On the CV and in
+  letters, always use the locked thesis figures. When the EnergyMap link is
+  on a CV, remind Rishwanth of the mismatch until the site is aligned or he
+  confirms 78% is a named base-case scenario.
+
+---
+
 ## name_dropping (across projects)
 
-**High value:** n8n, Ollama, A\*, Graph Neural Network, Figma, Miro, Moody's.
+**High value:** n8n, Ollama, A\*, Graph Neural Network, Figma, Miro, Moody's,
+Claude Code, MaStR, SMARD (Bundesnetzagentur).
 **Institutional:** Neue Nationalgalerie, Reichstag Dome, Rijksmuseum API.
 **Avoid:** naming the family construction business.
 
@@ -173,5 +254,6 @@ rules and a prompt library, then built AI agent skills to run it end to end.
   stakeholder mapping and user stories; the AI spec was **co-developed**.
 - The MuMa app was **specified and prototyped**, not built and deployed.
 - n8n project **is** built and running.
+- EnergyMap **is** live; its market funnel builder is **not** yet.
 - Co-Chef details need verification before first use.
 - Never put Hermes on a CV.

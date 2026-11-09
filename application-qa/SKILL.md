@@ -63,7 +63,17 @@ everything is assembled:
    or upgraded to "B2") across the CV, cover letter, and any application
    form text — `validate.py`'s claim locks catch deviation in each piece
    individually.
-5. **Document upload guidance (if asked):** past sessions included decoding
+5. **Corrected-fact consistency:** check every piece for facts corrected
+   after older CVs and letters were written: Libergy tender monitoring is
+   **16 EU platforms via Google Apps Script** (never "German platforms" or
+   "Power Automate", corrected 2026-11-05). If the EnergyMap link appears,
+   re-read the live site and confirm the counts on the CV (explorers,
+   studies) still match it, confirm the market funnel builder is not called
+   built, and flag that the site's thesis figures (78%, 31%) differ from the
+   locked thesis figures (70-90% feedstock-dependent, ~32%) used on the CV.
+   `validate.py` claim locks catch the tender and funnel-builder cases; the
+   live-site count check is manual.
+6. **Document upload guidance (if asked):** past sessions included decoding
    German reference letters (Arbeitszeugnis, Empfehlungsschreiben) — this
    uses established Zeugnissprache convention (coded phrasing where
    ostensibly neutral language signals a specific performance rating).

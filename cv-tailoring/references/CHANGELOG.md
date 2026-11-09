@@ -180,6 +180,60 @@ change.
 
 ---
 
+## 2026-11-05 — EnergyMap added; Libergy tender facts corrected
+
+**What:**
+- `evidence/projects.md`: new section 6, EnergyMap (live site, explorers,
+  sources, tools, insights, guardrails incl. the thesis-number mismatch).
+- `evidence/libergy.md`: tender monitoring now 16 EU platforms via Google
+  Apps Script (was 16 German platforms via Power Automate); Tools line too.
+- `facts.yaml`: `side_projects.energymap` added; Libergy `tender_monitoring`
+  + note added; skills bank gains Google Apps Script (demonstrated); Power
+  Automate kept as demonstrated on Rishwanth's confirmation, with a note that
+  no work evidence is on file (skills line only); Claude Code note.
+- `index/projects.facts.json`: ENM-F01..F09 added (3 marked `verified:
+  check` because they are live-site counts).
+- `index/libergy.facts.json`: LIB-F13 corrected.
+- `bullet-bank.json`: LIB-03 replaced with the corrected 107-char bullet;
+  ENM-01 (preferred) and ENM-02 added; counts 53 -> 55.
+- `scripts/validate.py`: 3 claim locks (tender wording, funnel builder
+  "built", 78%/31% thesis figures as WARN) and 2 selfcheck cases.
+- `scripts/build_bank.py`, `scripts/build_index.py`: same edits mirrored so
+  a regeneration does not revert them.
+- `SKILL.md`: counts updated (111 facts, 55 bullets); 2 claim guardrails.
+- cover-letter `SKILL.md` + `references/style-rules.md`: tender correction,
+  EnergyMap as a cluster item / candidate anchor for energy and data roles.
+- application-qa `SKILL.md`: new step 5, corrected-fact consistency.
+
+**Source:** Rishwanth's direct instructions, 2026-11-04/05 (Linde session):
+add EnergyMap to the system in the same structure as other evidence, and
+correct the Libergy tender facts to EU platforms and Google Apps Script.
+EnergyMap details from his own statements plus the live site read
+2026-11-04. These are factual changes, not article-driven workflow changes.
+
+**Corroboration:** n/a for the Libergy correction (primary source is
+Rishwanth). EnergyMap counts checked against the live site on 2026-11-04;
+flagged `check` because the site keeps changing.
+
+**Rejected:**
+- *Putting EnergyMap only in SKILL.md* (proposed earlier the same session).
+  The validator only reads evidence/index/facts, so it would have kept
+  flagging every EnergyMap term. Superseded by this change.
+- *Editing the master CV assets.* They contain no tender bullet. Their
+  Power Automate skills entry stays, since Rishwanth confirmed the skill.
+- *jd-recruiter-brief changes.* It reads evidence directly; nothing to edit.
+
+**Cost:** 14 files across 3 skills. Two fact files changed (`facts.yaml`,
+`evidence/libergy.md`) on Rishwanth's direct correction. CVs that already
+said "Google Apps Script" / "EU platforms" were right; the Linde draft that
+was switched to "Power Automate / German platforms" on 2026-11-04 needs
+switching back.
+
+**Revert:** `git log --oneline --grep="EnergyMap added"`, then `git revert`
+that commit.
+
+---
+
 ## Template for future entries
 
 ```

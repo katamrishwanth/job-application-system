@@ -88,6 +88,14 @@ CLAIM_LOCKS = [
      "International Belgium, ESCP carbon footprint), but Rishwanth only "
      "LED the ESCP one -- he was a consultant, not lead, on HI Belgium. "
      "'Leading 2 projects' overstates it; be specific about which one."),
+    (r"tender[^.]{0,80}(Power Automate|German platforms)|(Power Automate|German platforms)[^.]{0,80}tender", "ERROR",
+     "Libergy tender monitoring was corrected 2026-11-05 by Rishwanth: "
+     "16 EU platforms, automated with Google Apps Script."),
+    (r"funnel builder[^.]{0,40}\b(built|launched|live|shipped)\b|\b(built|launched|shipped)\b[^.]{0,40}funnel builder", "ERROR",
+     "EnergyMap's market funnel builder is in development. Never call it built until it is live."),
+    (r"\b78\s*%|\b31\s*%\s*more", "WARN",
+     "78% / 31% are EnergyMap site figures for the thesis. The locked thesis "
+     "figures are 70-90% (feedstock-dependent) and ~32%. Use those."),
 ]
 
 # ---------------------------------------------------------------- 4. PROVENANCE
@@ -292,13 +300,17 @@ def selfcheck(corpus):
          "work", "SHOULD FAIL: fabricated proper nouns"),
         ("Normalised BEV performance to maximum payload capacity, adding ~32% to BEV CAPEX and OPEX in the model",
          "work", "SHOULD PASS: real fact THS-F01"),
+        ("Automated tender monitoring across 16 German platforms via Power Automate and wrote the process guide",
+         "work", "SHOULD FAIL: Libergy tender correction lock"),
+        ("Built 4 data explorers on MaStR, SMARD and CERC data, from battery fleets to negative prices; published 2 market insight studies.",
+         "project", "SHOULD PASS: EnergyMap ENM-01"),
     ]
     ok = 0
     for t, ct, lbl in cases:
         if report(t, ct, corpus, lbl):
             ok += 1
     print(f"\n{'='*70}\n{ok}/{len(cases)} passed. "
-          f"(Cases 1,3,4,5 are SUPPOSED to fail.)")
+          f"(Cases 1,3,4,5,7 are SUPPOSED to fail.)")
 
 
 def main():
