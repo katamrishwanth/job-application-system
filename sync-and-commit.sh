@@ -46,6 +46,26 @@ done
 STAGING="$(mktemp -d)"
 trap 'rm -rf "$STAGING"' EXIT
 
+# --- refuse to clobber uncommitted repo edits ------------------------------
+# The copy step below rsyncs the server copy over the repo with --delete (in
+# --dry-run too). Any edit made directly in the repo, e.g. a CHANGELOG entry a
+# chat could not save to the server, would be silently wiped. Seen 2026-11-13:
+# the 2026-11-09 CHANGELOG entry existed only in the repo, so every sync
+# deleted it again.
+REPO_CHECK="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DIRTY="$(git -C "$REPO_CHECK" status --porcelain -- "${SKILLS[@]}")"
+if [[ -n "$DIRTY" ]]; then
+  echo "ERROR: the repo has uncommitted edits inside the skill folders:" >&2
+  echo "$DIRTY" >&2
+  echo >&2
+  echo "Syncing now would overwrite them with the server copy." >&2
+  echo "  - If the server already has these edits, commit them by hand, or" >&2
+  echo "    discard the repo copy:  git -C '$REPO_CHECK' restore -- ${SKILLS[*]}" >&2
+  echo "  - If the server does NOT have them, upload the skill to Claude first" >&2
+  echo "    (Settings > Capabilities > Skills), let the cache refresh, re-run." >&2
+  exit 1
+fi
+
 # --- pick a source --------------------------------------------------------
 if [[ $USE_EXPORTS -eq 1 ]]; then
   missing=()
