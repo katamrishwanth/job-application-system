@@ -11,6 +11,33 @@ done" at the bottom.
 
 ---
 
+## Rule for every change applied from a chat: the CHANGELOG lives in `cv-tailoring`
+
+There is one `CHANGELOG.md` for all four skills, at
+`cv-tailoring/references/CHANGELOG.md`. So a change to `jd-recruiter-brief`,
+`cover-letter` or `application-qa` touches **two** skills on the server: the
+one being changed, and `cv-tailoring` for its entry. The chat must save both
+before you run `sync-and-commit.sh`.
+
+If the entry only reaches the repo (or a "Claude outputs" folder), the server
+never has it, and every sync wipes it from the repo. This happened with the
+2026-11-09 `jd-recruiter-brief` change: the skill edit landed, the entry didn't,
+and it kept disappearing until `cv-tailoring` was re-uploaded on 2026-11-13.
+
+When you write a prompt for a change to any skill other than `cv-tailoring`,
+add this line to it:
+
+```
+Also add the CHANGELOG entry to references/CHANGELOG.md in my cv-tailoring
+skill, and save that skill too. Confirm both skills are saved before you finish.
+```
+
+If the entry still doesn't reach the server, `sync-and-commit.sh` will refuse
+to run because the repo has edits the server lacks. Upload the skill in Claude
+(Settings → Capabilities → Skills), let the local cache refresh, then re-run.
+
+---
+
 ## The prompt — paste everything between the lines
 
 ---
