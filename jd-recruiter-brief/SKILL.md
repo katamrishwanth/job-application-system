@@ -1,6 +1,6 @@
 ---
-name: jd-recruiter-brief
-description: Analyse a job description Rishwanth Katam shares and produce his structured recruiter brief. Trigger whenever he pastes or links a job posting, before any CV or cover letter work — this runs first and its output feeds cv-tailoring.
+name: "jd-recruiter-brief"
+description: "Analyse a job description Rishwanth Katam shares and produce his structured recruiter brief. Trigger whenever he pastes or links a job posting, before any CV or cover letter work — this runs first and its output feeds cv-tailoring."
 ---
 
 # JD Recruiter Brief — Rishwanth Katam
@@ -16,7 +16,56 @@ Do not paraphrase or "improve" the six-part structure without his explicit
 approval — see `workflow-rules.yaml`'s change_protocol in the cv-tailoring
 skill if a change is ever proposed.
 
+## HARD RULE — never report a posting as closed from a fetch tool
+
+A web-fetch tool (WebFetch or any server-side HTTP fetch, including curl)
+does NOT see what Rishwanth's browser sees. Most career sites (Phenom,
+Workday, SuccessFactors, Avature, Personio, Softgarden) build the job
+description with JavaScript, and many return a fallback page to non-browser
+requests: "job has been filled", "no longer available", "not found", an
+empty body, or a redirect to a search page.
+
+**Incident, 2026-11-09 (Birkenstock, Analytics Manager DTC Europe):** WebFetch
+returned a "job has been filled" stub for a live posting. Claude reported it
+to Rishwanth as filled. The same exact URL, opened in the built-in browser,
+showed the full live JD with an Apply button. This had happened before too.
+
+Therefore:
+- A "filled / closed / expired / not found / no longer available" result
+  from a fetch tool or a search snippet is **never** reported as fact. It is
+  treated as "could not read the page", nothing more.
+- Only a real browser render of the exact URL (Step 0) can show a posting
+  as closed, and even then Claude says what the page showed ("the page shows
+  a 'position filled' notice in my browser") and asks Rishwanth to confirm
+  on his end. Claude never states "the role has been filled".
+
 ## Steps
+
+0. **Get the JD text — browser first, exact URL only.**
+   - **If Rishwanth pasted the JD text**, use it. No fetching needed.
+   - **If he gave a link**, open that exact URL in a real browser before
+     anything else:
+     1. Load the `built-in-browser` skill (or `chrome-browser` if the
+        built-in browser isn't available), then load its tools.
+     2. Open the exact URL (built-in browser: `preview_start` with the URL).
+     3. Read it with `get_page_text`. If the text is empty or only shows the
+        header, the page is still rendering: wait 2–3 seconds and read again,
+        up to 3 attempts, before concluding anything.
+     4. Use the JD text from this render as the only source for the brief.
+   - **Never substitute a different posting.** Do not use a mirror
+     (ZipRecruiter, LinkedIn, Stepstone, aggregators), a similar title, or
+     another location's version unless Rishwanth explicitly OKs it in chat.
+     If he does, label the brief "JD source: mirror copy, not the employer
+     page".
+   - **If no real browser is reachable** (tools missing, desktop app
+     offline), WebFetch may be tried as a fallback. If it returns the full
+     JD, proceed and note "JD read via fetch, not browser" in the brief
+     header. If it returns anything else (a closed notice, an empty page, a
+     partial page), stop and tell Rishwanth plainly: "I couldn't read the
+     posting from here; the page didn't render for my tools. Can you paste
+     the JD text?" Do not say or imply the role is closed.
+   - **State the JD source in the brief header**, e.g. "JD read from your
+     link in the built-in browser".
 
 1. **Web search the company** for context before answering. Every past
    session did this (e.g. found FEV's named Commercial Vehicles practice,

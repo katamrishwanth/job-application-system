@@ -234,6 +234,48 @@ that commit.
 
 ---
 
+## 2026-11-09 — Browser-first JD retrieval in jd-recruiter-brief
+
+**What:** `jd-recruiter-brief/SKILL.md` only. Added a HARD RULE section and a
+new Step 0 ("Get the JD text — browser first, exact URL only"). The frozen
+prompt in `references/task1-prompt.md` and Steps 1–5 are unchanged.
+
+**Source:** Live failure, not external advice. On 2026-11-09 (Birkenstock,
+Analytics Manager DTC Europe, München) WebFetch returned a "job has been
+filled" fallback page for a posting that was live. Claude reported the role
+as filled. Rishwanth's browser and Claude's built-in browser both showed the
+full live JD on the exact same URL. Rishwanth noted this had happened before.
+
+**Cause:** Server-side fetch tools get no JavaScript and are treated as bots
+by many career platforms, which serve a closed/empty fallback page instead of
+the JD. The process error was trusting that single fetch result as fact.
+
+**Change:**
+- Links are opened in a real browser (built-in browser, else Claude in Chrome)
+  before anything else, with up to 3 read attempts while the page renders.
+- A closed/expired/not-found result from a fetch tool or search snippet is
+  never reported as fact; it means "could not read the page".
+- If no browser is reachable and fetch doesn't return the full JD, Claude asks
+  Rishwanth to paste the JD instead of calling the role closed.
+- No mirrors or similar postings without his explicit OK in chat.
+- The brief header states where the JD text came from.
+
+**Corroboration:** change_protocol steps 1–3 (external-source checks) don't
+apply; this is an internal bug fix verified by the live incident. Approved
+explicitly by Rishwanth in chat, 2026-11-09.
+
+**Rejected:** Using mirror postings (e.g. ZipRecruiter) as a default
+fallback. A mirror can be stale or a different version of the role, so it is
+allowed only with Rishwanth's explicit OK in chat.
+
+**Cost:** One SKILL.md edit plus this entry. No CVs, facts or evidence files
+affected.
+
+**Revert:** `git log --oneline --grep="Browser-first JD retrieval"`, then
+`git revert` that commit.
+
+---
+
 ## Template for future entries
 
 ```
