@@ -101,8 +101,32 @@ and should say so plainly in its message.
 2. Present findings and recommendation (step 6).
 3. **Implement only on explicit approval.** No approval, no edits, nothing to commit.
 4. Write the `CHANGELOG.md` entry — source, corroboration, rejected sub-claims
-   and why, cost paid (step 7).
+   and why, cost paid (step 7). **Save it to the server's `cv-tailoring`
+   skill**, even when the change is to a different skill (see below).
 5. Run `sync-and-commit.sh` (step 8).
+
+### The CHANGELOG lives in `cv-tailoring`
+
+There is one `CHANGELOG.md` for all four skills, at
+`cv-tailoring/references/CHANGELOG.md`. So a change to `jd-recruiter-brief`,
+`cover-letter` or `application-qa` touches **two** skills on the server: the
+one being changed, and `cv-tailoring` for its entry. The chat must save both
+before step 8.
+
+If the entry only reaches the repo (or a "Claude outputs" folder), the server
+never has it. The sync copies the server over the repo with `rsync --delete`
+(in `--dry-run` too), so the entry gets wiped on every run. This happened with
+the 2026-11-09 `jd-recruiter-brief` change: the skill edit landed on the server,
+the entry didn't, and it kept disappearing from the repo until `cv-tailoring`
+was re-uploaded on 2026-11-13. The change was then committed as `e613f89`.
+
+Since 2026-11-13 (`8a2f45f`), `sync-and-commit.sh` refuses to run while the
+skill folders have uncommitted edits, rather than overwriting them. If it stops:
+
+- **The server already has the edits:** commit them by hand, or discard the
+  repo copy with `git restore -- cv-tailoring cover-letter jd-recruiter-brief application-qa`.
+- **The server doesn't:** upload the skill in Claude (Settings → Capabilities →
+  Skills), let the local cache refresh, then re-run.
 
 ### The commit message *is* the changelog entry
 
