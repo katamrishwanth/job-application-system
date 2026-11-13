@@ -65,7 +65,9 @@ Steps 1–7 happen in the chat; step 8 happens here.
 1. Analyse the source, corroborate it, price the change (steps 1–5).
 2. Present findings. **Implement only on Rishwanth's explicit approval** (step 6).
 3. Write the `CHANGELOG.md` entry — source, corroboration, what was rejected and
-   why, cost paid (step 7).
+   why, cost paid (step 7). **Save it to the server's `cv-tailoring` skill**,
+   even when the change is to a different skill. See
+   [The CHANGELOG lives in `cv-tailoring`](#the-changelog-lives-in-cv-tailoring).
 4. On the laptop, run (step 8):
 
 ```bash
@@ -89,6 +91,28 @@ The script **refuses to reuse a CHANGELOG entry that is already committed**.
 Without that guard, a commit made without a new entry silently inherits the
 previous one, and the log ends up claiming it did something it did not — which
 happened once, in `053b2b9`. Use `-m`, or write a real entry.
+
+### The CHANGELOG lives in `cv-tailoring`
+
+There is one `CHANGELOG.md` for all four skills, at
+`cv-tailoring/references/CHANGELOG.md`. So a change to `jd-recruiter-brief`,
+`cover-letter` or `application-qa` touches **two** skills on the server: the
+one being changed, and `cv-tailoring` for its entry. The chat must save both
+before step 8.
+
+If the entry only reaches the repo (or a "Claude outputs" folder), the server
+never has it. The sync copies the server over the repo, so the entry gets
+wiped on every run. This happened with the 2026-11-09 `jd-recruiter-brief`
+change: the skill edit landed, the entry didn't, and it kept disappearing
+until `cv-tailoring` was re-uploaded on 2026-11-13.
+
+`sync-and-commit.sh` now refuses to run while the skill folders have
+uncommitted edits, rather than overwriting them. If it stops:
+
+- **The server already has the edits:** commit them by hand, or discard the
+  repo copy with `git restore -- cv-tailoring cover-letter jd-recruiter-brief application-qa`.
+- **The server doesn't:** upload the skill in Claude (Settings → Capabilities →
+  Skills), let the local cache refresh, then re-run.
 
 ---
 
